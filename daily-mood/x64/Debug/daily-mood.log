@@ -1,0 +1,5 @@
+﻿  uic dailymood.ui
+  dailymood.cpp
+  main.cpp
+  moc_dailymood.cpp
+  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\x64\Debug\daily-mood.exe
