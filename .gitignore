@@ -1,5 +1,110 @@
+# Ignore Visual Studio intermediate precompiled header files
+*.ipch
+
+# Ignore specific large file
+.vs/daily-mood/v17/ipch/AutoPCH/6ddcdb4218f75294/DAILYMOOD.ipch
+
+# Qt specific files
+*.o
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.obj
+*.lib
+*.prl
+*.moc
+*.qmake.stash
+*.qmake.cache
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Qt Creator specific files
+*.pro.user
+*.pro.user.*
+*.qbs.user
+*.qbs.user.*
+*.creator.user
+*.creator.user.*
+*.creator
+*.creator.*
+
+# Ignore build directories
+build-*/
+
+# CMake artifacts
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+cmake_install.cmake
+CTestTestfile.cmake
+*.cmake
+CMakeScripts/
+
+# Ignore compiled binary files
 *.exe
 *.out
 *.app
+*.dSYM
+*.apk
 
-.vs/*
+# Ignore generated documentation
+*.qhc
+*.qch
+
+# Ignore other files that can be generated
+*.log
+*.tmp
+
+# Ignore IDE and editor directories
+/.vscode/
+/.vscode/
+/.idea/
+/.ipynb_checkpoints
+
+# Visual Studio specific files and directories
+.vscode/
+.vs/
+*.vcxproj*
+*.vcxproj.user
+*.vcxproj.filters
+*.pdb
+*.ilk
+*.ipch
+*.aps
+*.ncb
+*.sdf
+*.suo
+*.sln
+*.user
+*.opendb
+*.tlog
+*.lastbuildstate
+*.log
+*.vspscc
+*.vssscc
+_BuildLog.html
+_ReSharper.*
+*_i.c
+*_p.c
+*_h.h
+*.idb
+*.ipdb
+*.iobj
+*.map
+*.pch
+*.obj
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.trx
+*.vcxproj.filters
+.vspscc
+.vssscc
+build/
+ipch/
+# Specific large file
+vs/daily-mood/v17/ipch/AutoPCH/6ddcdb4218f75294/DAILYMOOD.ipch
