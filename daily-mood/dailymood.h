@@ -13,4 +13,6 @@ public:
 
 private:
     Ui::dailymoodClass ui;
+private slots:
+    void addBtnClicked();
 };
