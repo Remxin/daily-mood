@@ -21,9 +21,13 @@ private:
 public:
 	Todo(std::string s);
 	Todo(unsigned day, unsigned month, int year, unsigned hour, unsigned minute, std::string name, bool done);
-	std::string toString();
+	
+	// setters
 	void toggleDone();
-	void changeTime(unsigned hour, unsigned minute);
+	void setTime(unsigned hour, unsigned minute);
+
+	// getters
+	std::string toString();
 	
 };
 
@@ -73,7 +77,7 @@ void Todo::toggleDone() {
 	this->done = true;
 }
 
-void Todo::changeTime(unsigned hour, unsigned minute) {
+void Todo::setTime(unsigned hour, unsigned minute) {
 	if (hour > date::maxHour) throw "hour must be in range (0-23)";
 	if (minute >> date::maxMinute) throw "minute must be in range (0-59)";
 

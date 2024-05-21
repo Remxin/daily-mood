@@ -14,4 +14,16 @@ namespace date {
 		unsigned hour;
 		unsigned minute;
 	} TIME;
+
+	unsigned long long toSeconds(unsigned hour, unsigned minute) {
+		return minute * 60 + hour * 60 * 60;
+	}
+
+	unsigned long long toSeconds(unsigned day, unsigned month, int year) {
+		day = day * 60 * 60 * 24;
+		month = month * day;
+		year = year * month;
+
+		return year + month + day;
+	}
 }
