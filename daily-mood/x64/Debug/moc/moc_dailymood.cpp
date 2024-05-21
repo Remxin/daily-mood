@@ -41,14 +41,16 @@ struct qt_meta_stringdata_CLASSdailymoodENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSdailymoodENDCLASS = QtMocHelpers::stringData(
     "dailymood",
     "addBtnClicked",
-    ""
+    "",
+    "openEventDialog"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSdailymoodENDCLASS_t {
-    uint offsetsAndSizes[6];
+    uint offsetsAndSizes[8];
     char stringdata0[10];
     char stringdata1[14];
     char stringdata2[1];
+    char stringdata3[16];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSdailymoodENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -56,11 +58,13 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSdailymoodENDCLASS_t qt_meta_str
     {
         QT_MOC_LITERAL(0, 9),  // "dailymood"
         QT_MOC_LITERAL(10, 13),  // "addBtnClicked"
-        QT_MOC_LITERAL(24, 0)   // ""
+        QT_MOC_LITERAL(24, 0),  // ""
+        QT_MOC_LITERAL(25, 15)   // "openEventDialog"
     },
     "dailymood",
     "addBtnClicked",
-    ""
+    "",
+    "openEventDialog"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -72,7 +76,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdailymoodENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,9 +84,11 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSdailymoodENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   26,    2, 0x08,    1 /* Private */,
+       3,    0,   27,    2, 0x08,    2 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -98,6 +104,8 @@ Q_CONSTINIT const QMetaObject dailymood::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<dailymood, std::true_type>,
         // method 'addBtnClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'openEventDialog'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -110,6 +118,7 @@ void dailymood::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         (void)_t;
         switch (_id) {
         case 0: _t->addBtnClicked(); break;
+        case 1: _t->openEventDialog(); break;
         default: ;
         }
     }
@@ -135,13 +144,13 @@ int dailymood::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }
