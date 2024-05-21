@@ -27,6 +27,12 @@
     <Filter Include="Source Files\Classes">
       <UniqueIdentifier>{ba779fde-354f-4934-bb9d-acca8a698e77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Structures">
+      <UniqueIdentifier>{815bb9c1-6545-4ec1-a6a8-4cedbe8bd9da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helpers">
+      <UniqueIdentifier>{72b44f7b-ed58-40af-b6a0-e6ad7596ab10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="dailymood.qrc">
@@ -49,10 +55,30 @@
     <ClCompile Include="fileReader.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="todo.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="mood.cpp">
+      <Filter>Source Files\Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="date.cpp">
+      <Filter>Source Files\Structures</Filter>
+    </ClCompile>
+    <ClCompile Include="Source Files\Helpers\helpers.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt">
       <Filter>Data</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="todo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="mood.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
