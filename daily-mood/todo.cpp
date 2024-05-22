@@ -28,6 +28,11 @@ public:
 
 	// getters
 	std::string toString();
+	std::string getDate();
+	std::string getTime();
+	std::string getName();
+	bool getDone();
+
 	
 };
 
@@ -84,3 +89,19 @@ void Todo::setTime(unsigned hour, unsigned minute) {
 	this->time.hour = hour;
 	this->time.minute = minute;
 }
+
+std::string Todo::getDate() {
+	std::stringstream ss;
+	ss << this->date.day << "/" << this->date.month << "/" << this->date.year;
+	return ss.str();
+}
+
+std::string Todo::getTime() {
+	std::stringstream ss;
+	ss << this->time.hour << ":" << this->time.hour;
+	return ss.str();
+}
+
+std::string Todo::getName() { return this->name; };
+
+bool Todo::getDone() { this->done; };
