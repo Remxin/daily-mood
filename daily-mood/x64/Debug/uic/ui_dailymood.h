@@ -35,7 +35,7 @@ public:
     QLabel *label;
     QWidget *verticalLayoutWidget;
     QVBoxLayout *verticalLayout;
-    QPushButton *pushButton;
+    QPushButton *addTodoButton;
     QPushButton *pushButton_3;
     QPushButton *pushButton_2;
     QScrollArea *todosScroll;
@@ -72,16 +72,16 @@ public:
 
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(450, 19, 160, 341));
+        verticalLayoutWidget->setGeometry(QRect(450, 19, 170, 341));
         verticalLayout = new QVBoxLayout(verticalLayoutWidget);
         verticalLayout->setSpacing(6);
         verticalLayout->setContentsMargins(11, 11, 11, 11);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        pushButton = new QPushButton(verticalLayoutWidget);
-        pushButton->setObjectName("pushButton");
+        addTodoButton = new QPushButton(verticalLayoutWidget);
+        addTodoButton->setObjectName("addTodoButton");
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(addTodoButton);
 
         pushButton_3 = new QPushButton(verticalLayoutWidget);
         pushButton_3->setObjectName("pushButton_3");
@@ -122,7 +122,7 @@ public:
     {
         dailymoodClass->setWindowTitle(QCoreApplication::translate("dailymoodClass", "dailymood", nullptr));
         label->setText(QCoreApplication::translate("dailymoodClass", "TODOS", nullptr));
-        pushButton->setText(QCoreApplication::translate("dailymoodClass", "ADD TODO", nullptr));
+        addTodoButton->setText(QCoreApplication::translate("dailymoodClass", "ADD TODO", nullptr));
         pushButton_3->setText(QCoreApplication::translate("dailymoodClass", "UPDATE MOOD", nullptr));
         pushButton_2->setText(QCoreApplication::translate("dailymoodClass", "VIEW MOOD GRAPH", nullptr));
     } // retranslateUi

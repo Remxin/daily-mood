@@ -100,15 +100,19 @@
     <QtUic Include="dailymood.ui" />
     <QtMoc Include="dailymood.h" />
     <ClCompile Include="dailymood.cpp" />
+    <ClCompile Include="EventDialog.cpp" />
     <ClCompile Include="fileReader.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="EventDialog.ui" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="data.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="mood.h" />
-    <ClInclude Include="todo.h" />
+    <QtMoc Include="EventDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ui_eventdialog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
