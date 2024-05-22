@@ -5,8 +5,8 @@
 #include <format>
 #include <sstream>
 
-#include "helpers.cpp"
-#include "date.cpp"
+#include "helpers.h"
+#include "date.h"
 
 
 

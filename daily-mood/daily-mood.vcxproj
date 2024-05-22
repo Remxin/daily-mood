@@ -112,7 +112,12 @@
     <QtMoc Include="EventDialog.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="date.h" />
+    <ClInclude Include="helpers.h" />
     <ClInclude Include="ui_eventdialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="daily-mood.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

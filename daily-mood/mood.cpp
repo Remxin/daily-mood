@@ -1,5 +1,5 @@
 #include "mood.h"
-#include "date.cpp"
+#include "date.h"
 
 #include <string>
 #include <sstream>
