@@ -33,6 +33,9 @@
     <Filter Include="Source Files\Helpers">
       <UniqueIdentifier>{72b44f7b-ed58-40af-b6a0-e6ad7596ab10}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{2fca1bda-1bdc-423f-9091-67db150971b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="dailymood.qrc">
@@ -64,7 +67,7 @@
     <ClCompile Include="date.cpp">
       <Filter>Source Files\Structures</Filter>
     </ClCompile>
-    <ClCompile Include="Source Files\Helpers\helpers.cpp">
+    <ClCompile Include="helpers.cpp">
       <Filter>Source Files\Helpers</Filter>
     </ClCompile>
   </ItemGroup>

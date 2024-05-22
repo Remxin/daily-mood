@@ -104,4 +104,4 @@ std::string Todo::getTime() {
 
 std::string Todo::getName() { return this->name; };
 
-bool Todo::getDone() { this->done; };
+bool Todo::getDone() { return this->done; };

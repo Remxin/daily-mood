@@ -92,9 +92,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="helpers.cpp" />
     <ClCompile Include="mood.cpp" />
     <ClCompile Include="date.cpp" />
-    <ClCompile Include="Source Files\Helpers\helpers.cpp" />
     <ClCompile Include="todo.cpp" />
     <QtRcc Include="dailymood.qrc" />
     <QtUic Include="dailymood.ui" />
