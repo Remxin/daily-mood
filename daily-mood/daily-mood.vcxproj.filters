@@ -62,13 +62,13 @@
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="date.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Structures</Filter>
     </ClCompile>
     <ClCompile Include="helpers.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Helpers</Filter>
     </ClCompile>
     <ClCompile Include="todo.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Classes</Filter>
     </ClCompile>
     <ClCompile Include="mood.cpp">
       <Filter>Source Files</Filter>
