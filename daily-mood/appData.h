@@ -7,7 +7,7 @@
 class appData
 {
 private:
-	std::vector<todo> todos;
+	std::vector<Todo> todos;
 	std::vector<mood> moods;
 public:
 	// setters
@@ -15,6 +15,6 @@ public:
 	void addMood(std::string data);
 
 	// getters
-	std::vector<todo> getTodos();
+	std::vector<Todo> getTodos();
 };
 

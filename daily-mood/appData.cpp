@@ -4,6 +4,7 @@
 
 
 void appData::addTodo(std::string data) {
-	Todo newTodo = Todo(data);
-	this->todos.push_back(newTodo);
+	this->todos.push_back(Todo(data));
 };
+
+std::vector<Todo> appData::getTodos() { return this->todos; };

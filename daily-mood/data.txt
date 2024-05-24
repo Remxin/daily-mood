@@ -1,5 +1,5 @@
-20/05/2024  zrobic project z JiPP    10:00    0
-20/05/2024  poodkurzac    0    0
-20/05/2024  zrobic obiad    15:00    0djcjdwcn	Sat Jan 1 2000	00:00:00	0
-01/01/2000	cervcfrv	00:00:00	0
-01/01/2000	Zrobic pranie	00:00:00	0
+20/05/2024	zrobic project z JiPP	10:00	0
+20/05/2024	poodkurzac	10:00	0
+20/05/2024	zrobic obiad	15:00	0
+01/01/2000	cervcfrv	00:00	0
+01/01/2000	Zrobic pranie	00:00	0

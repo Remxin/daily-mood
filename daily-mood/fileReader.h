@@ -1,3 +1,4 @@
+#pragma once
 #ifndef FILEREADER_H
 #define FILEREADER_H
 
@@ -19,7 +20,7 @@ public:
     ~fileReader();
 
     // Getter
-    std::vector<std::string> getData() const;
+    std::vector<std::string> getData();
 };
 
 #endif // FILEREADER_H

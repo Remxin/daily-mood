@@ -1,23 +1,10 @@
+#pragma once
 #ifndef TODO_H
 #define TODO_H
 
 #include <string>
-
-namespace date {
-    struct DATE {
-        unsigned day;
-        unsigned month;
-        int year;
-    };
-
-    struct TIME {
-        unsigned hour;
-        unsigned minute;
-    };
-
-    const unsigned maxHour = 23;
-    const unsigned maxMinute = 59;
-}
+#include "helpers.h"
+#include "date.h"
 
 class Todo {
 private:

@@ -1,45 +1,20 @@
 #include "todo.h"
 #include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <format>
 #include <sstream>
 
-#include "helpers.h"
-#include "date.h"
 
 
 
-
-class Todo {
-private:
-	date::DATE date;
-	date::TIME time;
-	std::string name;
-	bool done;
-
-public:
-	Todo(std::string s);
-	Todo(unsigned day, unsigned month, int year, unsigned hour, unsigned minute, std::string name, bool done);
-	
-	// setters
-	void toggleDone();
-	void setTime(unsigned hour, unsigned minute);
-
-	// getters
-	std::string toString();
-	std::string getDate();
-	std::string getTime();
-	std::string getName();
-	bool getDone();
-
-	
-};
 
 Todo::Todo(std::string s) {
-	std::vector<std::string> splited = helpers::split(s, ' ');
-	
+	std::vector<std::string> splited = helpers::split(s, '\t');
+
 	std::vector<std::string> date = helpers::split(splited[0], '/');
+	std::cout << date[0];
 	std::vector<std::string> time = helpers::split(splited[2], ':');
 	this->date.day = std::stoi(date[0]);
 	this->date.month = std::stoi(date[1]);

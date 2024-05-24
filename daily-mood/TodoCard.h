@@ -1,16 +1,20 @@
+#pragma once
 #ifndef CUSTOMWIDGET_H
 #define CUSTOMWIDGET_H
 
 #include <QWidget>
+#include <QtWidgets/QApplication>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include "todo.h"
+#include <QScrollArea>
 
 class TodoCard : public QWidget {
     Q_OBJECT
 
 public:
-    explicit TodoCard(QWidget* parent = nullptr);
+    explicit TodoCard(QObject* parent, Todo todo);
 
 private slots:
     void onButtonClicked();

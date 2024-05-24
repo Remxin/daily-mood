@@ -1,8 +1,12 @@
 #include "TodoCard.h"
+#include "todo.h"
+#include <string>
 
 
-TodoCard::TodoCard(QWidget* parent) : QWidget(parent) {
-    label = new QLabel("This is a custom widget", this);
+TodoCard::TodoCard(QObject* parent, Todo todo) {
+    std::string name = todo.getName();
+    QString qname = QString::fromStdString(name);
+    label = new QLabel(qname, this);
     button = new QPushButton("Click Me", this);
 
     QVBoxLayout* layout = new QVBoxLayout(this);
