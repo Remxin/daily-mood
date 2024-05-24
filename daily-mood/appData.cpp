@@ -5,7 +5,7 @@
 
 appData::appData(std::vector<std::string> initialData) {
 	for (std::string d : initialData) {
-		this->todos.push_back(Todo(d));
+        this->addTodo(d);
 	}
 }
 
@@ -26,5 +26,9 @@ void appData::displayTodos(QWidget* todoScroll) {
 void appData::addTodo(std::string data) {
 	this->todos.push_back(Todo(data));
 };
+
+void appData::addMood(std::string data) {
+    //this->moods.push_back(Mood(data));
+}
 
 std::vector<Todo> appData::getTodos() { return this->todos; };

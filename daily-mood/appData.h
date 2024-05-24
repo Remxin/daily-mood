@@ -12,7 +12,7 @@ class appData
 {
 private:
 	std::vector<Todo> todos;
-	std::vector<mood> moods;
+	std::vector<Mood> moods;
 public:
 	appData(std::vector<std::string> initialData);
 	// methods
