@@ -2,6 +2,8 @@
 #ifndef DATE_H
 #define DATE_H
 
+#include <string>
+
 namespace date {
     // Declare constants as extern
     extern const unsigned maxDay;
@@ -22,6 +24,7 @@ namespace date {
     } TIME;
 
     // Function prototypes
+    std::string convertTo2Digits(unsigned num);
     unsigned long long toSeconds(unsigned hour, unsigned minute);
     unsigned long long toSeconds(unsigned day, unsigned month, int year);
 }

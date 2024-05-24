@@ -6,6 +6,12 @@ namespace date {
 	const unsigned maxHour = 23;
 	const unsigned maxMinute = 59;
 
+
+	std::string convertTo2Digits(unsigned num) {
+		if (num < 10) return "0" + std::to_string(num);
+		return std::to_string(num);
+	}
+
 	unsigned long long toSeconds(unsigned hour, unsigned minute) {
 		return minute * 60 + hour * 60 * 60;
 	}

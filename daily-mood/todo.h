@@ -28,6 +28,7 @@ public:
     std::string getTime();
     std::string getName();
     bool getDone();
+    date::DATE getDateObj();
 };
 
 #endif // TODO_H

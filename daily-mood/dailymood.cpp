@@ -3,10 +3,27 @@
 #include <QFile>
 #include <QTextStream>
 
+
 dailymood::dailymood(QWidget* parent)
     : QMainWindow(parent)
 {
     ui.setupUi(this);
+    // accessing ui components
+    QWidget* todoScroll = ui.todosScroll;
+
+    QCalendarWidget* calendar = ui.calendarWidget;
+    std::string selectedDate = calendar->selectedDate().toString("dd/MM/yyyy").toStdString();
+
+
+    // getting text data
+    fileReader freader("data.txt");
+    std::vector<std::string> moodTextData = freader.getData();
+
+    //// adding todos and moods
+    this->applicationData = new appData(moodTextData, selectedDate);
+    this->applicationData->displayTodos(todoScroll);
+
+    connect(calendar, &QCalendarWidget::selectionChanged, this, &dailymood::onDateChanged);
     connect(ui.addTodoButton, &QPushButton::clicked, this, &dailymood::addBtnClicked);
 }
 
@@ -44,3 +61,30 @@ void dailymood::openEventDialog() {
             "Name: " + name + "\nDate: " + formattedDate + "\nTime: " + time.toString());
     }
 }
+
+void dailymood::onDateChanged() {
+    QCalendarWidget* calendar = ui.calendarWidget;
+    QString selectedDate = calendar->selectedDate().toString("dd/MM/yyyy");
+    this->applicationData->setDate(selectedDate.toStdString());
+    this->applicationData->clearTodos();
+    this->applicationData->displayTodos();
+    //updateTodoCards(selectedDate);
+}
+
+//void dailymood::updateTodoCards(const QString& selectedDateString) {
+//     Clear the existing layout
+//    QLayoutItem* item;
+//    while ((item = this->layout->takeAt(0)) != nullptr) {
+//        delete item->widget(); // delete the widget
+//        delete item; // delete the layout item
+//    }
+//
+//     Get todos and display them based on the selected date
+//    std::vector<Todo> todos = this->applicationData->getTodos();
+//    for (Todo &todo : todos) {
+//        if (QString::fromStdString(todo.getDate()) == selectedDateString) {
+//            TodoCard* todoCard = new TodoCard(todo);
+//            layout->addWidget(todoCard);
+//        }
+//    }
+//}
