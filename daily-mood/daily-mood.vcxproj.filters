@@ -73,6 +73,12 @@
     <ClCompile Include="mood.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TodoCard.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="appData.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ui_eventdialog.h">
@@ -84,6 +90,15 @@
     <ClInclude Include="date.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="appData.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="todo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="fileReader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="EventDialog.ui">
@@ -92,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="EventDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TodoCard.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

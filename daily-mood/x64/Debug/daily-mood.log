@@ -1,2 +1,109 @@
-﻿  date.cpp
-  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\x64\Debug\daily-mood.exe
+﻿  appData.cpp
+  todo.cpp
+  TodoCard.cpp
+  fileReader.cpp
+  main.cpp
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,14): error C2065: 'todo': undeclared identifier (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,7): error C2923: 'std::vector': 'todo' is not a valid template type argument for parameter '_Ty' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,14): message : see declaration of 'todo' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,7): error C2976: 'std::vector': too few template arguments (compiling source file appData.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,20): error C2955: 'std::vector': use of class template requires template argument list (compiling source file appData.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,14): error C2065: 'todo': undeclared identifier (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,7): error C2923: 'std::vector': 'todo' is not a valid template type argument for parameter '_Ty' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,14): message : see declaration of 'todo' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,7): error C2976: 'std::vector': too few template arguments (compiling source file appData.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,20): error C2955: 'std::vector': use of class template requires template argument list (compiling source file appData.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,13): error C2663: 'std::vector<_Ty,_Alloc>::push_back': no overloaded function has valid conversion for 'this' pointer
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(876,23): message : could be 'void std::vector<_Ty,_Alloc>::push_back(_Ty &&)' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,13): message : 'void std::vector<_Ty,_Alloc>::push_back(_Ty &&)': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,6): message : Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,6): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(872,23): message : or       'void std::vector<_Ty,_Alloc>::push_back(const _Ty &)' (compiling source file appData.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,13): message : 'void std::vector<_Ty,_Alloc>::push_back(const _Ty &)': cannot convert 'this' pointer from 'std::vector' to 'std::vector<_Ty,_Alloc> &'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,6): message : Reason: cannot convert from 'std::vector' to 'std::vector<_Ty,_Alloc>'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,6): message : Conversion requires a second user-defined-conversion operator or constructor
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.cpp(8,13): message : while trying to match the argument list '(Todo)'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\format(43): warning STL4038: The contents of <format> are available only with C++20 or later.
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\date.h(16,7): error C2371: 'date::DATE': redefinition; different basic types (compiling source file todo.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(7,12): message : see declaration of 'date::DATE' (compiling source file todo.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\date.h(21,7): error C2371: 'date::TIME': redefinition; different basic types (compiling source file todo.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(13,12): message : see declaration of 'date::TIME' (compiling source file todo.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(14,12): error C2011: 'Todo': 'class' type redefinition
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(39,7): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(39,27): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(44,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(45,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(46,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(48,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(49,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(51,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(52,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(54,1): warning C4508: '{ctor}': function should return a value; 'void' return type assumed
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(58,7): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(58,113): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(63,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(68,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(70,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(71,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(72,1): warning C4508: '{ctor}': function should return a value; 'void' return type assumed
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(74,19): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,8): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,33): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,60): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,87): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,109): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,135): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(76,162): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(80,12): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(81,6): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(81,18): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(82,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(85,12): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(87,13): warning C4293: '>>': shift count negative or too big, undefined behavior
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(89,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(90,2): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(93,19): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(95,8): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(95,33): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(95,60): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(99,19): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(101,8): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(101,34): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(105,19): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(105,38): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(107,12): error C2027: use of undefined type 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.h(22,7): message : see declaration of 'Todo'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\todo.cpp(107,31): error C2355: 'this': can only be referenced inside non-static member functions or non-static data member initializers
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\fileReader.cpp(7,18): error C2011: 'fileReader': 'class' type redefinition
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\fileReader.h(9,7): message : see declaration of 'fileReader'
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,14): error C2065: 'todo': undeclared identifier (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,7): error C2923: 'std::vector': 'todo' is not a valid template type argument for parameter '_Ty' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,14): message : see declaration of 'todo' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,7): error C2976: 'std::vector': too few template arguments (compiling source file main.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(10,20): error C2955: 'std::vector': use of class template requires template argument list (compiling source file main.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,14): error C2065: 'todo': undeclared identifier (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,7): error C2923: 'std::vector': 'todo' is not a valid template type argument for parameter '_Ty' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,14): message : see declaration of 'todo' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,7): error C2976: 'std::vector': too few template arguments (compiling source file main.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(18,20): error C2955: 'std::vector': use of class template requires template argument list (compiling source file main.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(19,1): error C2512: 'std::vector': no appropriate default constructor available (compiling source file main.cpp)
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\vector(438,1): message : see declaration of 'std::vector' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\appData.h(19,1): message : This diagnostic occurred in the compiler generated function 'appData::appData(void)' (compiling source file main.cpp)
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\main.cpp(14,38): message : see reference to function 'appData::appData(void)'
