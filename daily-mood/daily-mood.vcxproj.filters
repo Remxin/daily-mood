@@ -93,10 +93,10 @@
     <ClInclude Include="appData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="todo.h">
+    <ClInclude Include="fileReader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="fileReader.h">
+    <ClInclude Include="todo.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

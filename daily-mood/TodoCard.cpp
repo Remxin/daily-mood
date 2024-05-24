@@ -1,23 +1,31 @@
 #include "TodoCard.h"
-#include "todo.h"
-#include <string>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
 
+TodoCard::TodoCard(Todo todo, QWidget* parent) : QWidget(parent), m_todo(todo)
+{
+    // Create layout for the TodoCard
+    QHBoxLayout* layout = new QHBoxLayout(this);
 
-TodoCard::TodoCard(QObject* parent, Todo todo) {
-    std::string name = todo.getName();
-    QString qname = QString::fromStdString(name);
-    label = new QLabel(qname, this);
-    button = new QPushButton("Click Me", this);
+    // Create labels for displaying Todo details
+    QLabel* titleLabel = new QLabel(QString::fromStdString(todo.getName())); // Using QString for conversion
+    QLabel* dateLabel = new QLabel(QString::fromStdString(todo.getDate())); // Using QString for conversion
+    QLabel* timeLabel = new QLabel(QString::fromStdString(todo.getTime())); // Using QString for conversion
 
-    QVBoxLayout* layout = new QVBoxLayout(this);
-    layout->addWidget(label);
-    layout->addWidget(button);
+    // Create button for interaction (e.g., mark as done)
+    QPushButton* doneButton = new QPushButton("Done");
+    connect(doneButton, &QPushButton::clicked, this, [this]() {
+        // Emit signal to notify that the todo is marked as done
+        emit todoMarkedAsDone(m_todo);
+        });
 
-    connect(button, &QPushButton::clicked, this, &TodoCard::onButtonClicked);
+    // Add widgets to layout
+    layout->addWidget(titleLabel);
+    layout->addWidget(dateLabel);
+    layout->addWidget(timeLabel);
+    layout->addWidget(doneButton);
 
+    // Set layout to the widget
     setLayout(layout);
-}
-
-void TodoCard::onButtonClicked() {
-    label->setText("Button Clicked!");
 }

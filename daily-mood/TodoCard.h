@@ -1,27 +1,21 @@
-#pragma once
-#ifndef CUSTOMWIDGET_H
-#define CUSTOMWIDGET_H
+#ifndef TODOCARD_H
+#define TODOCARD_H
 
 #include <QWidget>
-#include <QtWidgets/QApplication>
-#include <QLabel>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include "todo.h"
-#include <QScrollArea>
+#include "todo.h" // Include the Todo class
 
 class TodoCard : public QWidget {
     Q_OBJECT
 
 public:
-    explicit TodoCard(QObject* parent, Todo todo);
+    TodoCard(Todo todo, QWidget* parent = nullptr);
+    // Constructor taking Todo object
 
-private slots:
-    void onButtonClicked();
+signals:
+    void todoMarkedAsDone(const Todo& todo); // Signal emitted when the todo is marked as done
 
 private:
-    QLabel* label;
-    QPushButton* button;
+    Todo m_todo; // Member variable to store the Todo object
 };
 
-#endif // CUSTOMWIDGET_H
+#endif // TODOCARD_H
