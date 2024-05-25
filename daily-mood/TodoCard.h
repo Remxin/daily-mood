@@ -3,6 +3,9 @@
 
 #include <QWidget>
 #include "todo.h" // Include the Todo class
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
 
 class TodoCard : public QWidget {
     Q_OBJECT
@@ -16,6 +19,7 @@ signals:
 
 private:
     Todo m_todo; // Member variable to store the Todo object
+    QPushButton* doneButton;
 };
 
 #endif // TODOCARD_H
