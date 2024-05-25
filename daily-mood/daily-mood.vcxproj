@@ -92,10 +92,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="appData.cpp" />
     <ClCompile Include="helpers.cpp" />
     <ClCompile Include="mood.cpp" />
     <ClCompile Include="date.cpp" />
     <ClCompile Include="todo.cpp" />
+    <ClCompile Include="TodoCard.cpp" />
     <QtRcc Include="dailymood.qrc" />
     <QtUic Include="dailymood.ui" />
     <QtMoc Include="dailymood.h" />
@@ -112,7 +114,17 @@
     <QtMoc Include="EventDialog.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="appData.h" />
+    <ClInclude Include="date.h" />
+    <ClInclude Include="fileReader.h" />
+    <ClInclude Include="helpers.h" />
+    <QtMoc Include="TodoCard.h" />
+    <ClInclude Include="mood.h" />
+    <ClInclude Include="todo.h" />
     <ClInclude Include="ui_eventdialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="daily-mood.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

@@ -1,26 +1,6 @@
 #include "mood.h"
-#include "date.cpp"
 
-#include <string>
-#include <sstream>
 
-class Mood {
-private:
-	date::DATE date;
-	unsigned rating;
-	std::string description;
-
-public:
-	Mood(unsigned day, unsigned month, int year, unsigned rating, std::string description);
-	void setRating(unsigned rating);
-
-	// getters
-	std::string toString();
-	std::string getDate();
-	unsigned getRating();
-	std::string getDescription();
-
-};
 
 Mood::Mood(unsigned day, unsigned month, int year, unsigned rating, std::string description) {
 	if (day > date::maxDay) throw "day must be in range (0-31)";

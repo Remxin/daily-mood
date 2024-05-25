@@ -1,44 +1,18 @@
 #include "todo.h"
 #include <iostream>
+#include <iostream>
 #include <string>
 #include <vector>
 #include <format>
 #include <sstream>
 
-#include "helpers.cpp"
-#include "date.cpp"
 
 
 
-
-class Todo {
-private:
-	date::DATE date;
-	date::TIME time;
-	std::string name;
-	bool done;
-
-public:
-	Todo(std::string s);
-	Todo(unsigned day, unsigned month, int year, unsigned hour, unsigned minute, std::string name, bool done);
-	
-	// setters
-	void toggleDone();
-	void setTime(unsigned hour, unsigned minute);
-
-	// getters
-	std::string toString();
-	std::string getDate();
-	std::string getTime();
-	std::string getName();
-	bool getDone();
-
-	
-};
 
 Todo::Todo(std::string s) {
-	std::vector<std::string> splited = helpers::split(s, ' ');
-	
+	std::vector<std::string> splited = helpers::split(s, '\t');
+
 	std::vector<std::string> date = helpers::split(splited[0], '/');
 	std::vector<std::string> time = helpers::split(splited[2], ':');
 	this->date.day = std::stoi(date[0]);
@@ -92,16 +66,21 @@ void Todo::setTime(unsigned hour, unsigned minute) {
 
 std::string Todo::getDate() {
 	std::stringstream ss;
-	ss << this->date.day << "/" << this->date.month << "/" << this->date.year;
+	ss << date::convertTo2Digits(this->date.day) << "/" << date::convertTo2Digits(this->date.month) << "/" << this->date.year;
 	return ss.str();
 }
 
 std::string Todo::getTime() {
 	std::stringstream ss;
-	ss << this->time.hour << ":" << this->time.hour;
+	ss << date::convertTo2Digits(this->time.hour) << ":" << date::convertTo2Digits(this->time.minute);
 	return ss.str();
 }
 
 std::string Todo::getName() { return this->name; };
 
 bool Todo::getDone() { return this->done; };
+
+
+date::DATE Todo::getDateObj() {
+	return this->date;
+}

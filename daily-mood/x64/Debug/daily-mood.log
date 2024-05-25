@@ -1,11 +1,2 @@
-﻿  Reading Qt configuration (C:/Qt/6.6.3/msvc2019_64/bin/qmake)
-  helpers.cpp
-  mood.cpp
-  date.cpp
-  todo.cpp
-  dailymood.cpp
-  fileReader.cpp
-  main.cpp
-c1xx : fatal  error C1083: Cannot open source file: 'fileReader.cpp': No such file or directory
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\format(43): warning STL4038: The contents of <format> are available only with C++20 or later.
-C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\daily-mood\todo.cpp(107): error C4716: 'Todo::getDone': must return a value
+﻿  TodoCard.cpp
+  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\x64\Debug\daily-mood.exe

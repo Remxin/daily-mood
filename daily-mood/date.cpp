@@ -1,19 +1,16 @@
+#include "date.h"
+
 namespace date {
-	unsigned maxDay = 31;
-	unsigned maxMonth = 12;
-	unsigned maxHour = 23;
-	unsigned maxMinute = 59;
+	const unsigned maxDay = 31;
+	const unsigned maxMonth = 12;
+	const unsigned maxHour = 23;
+	const unsigned maxMinute = 59;
 
-	typedef struct {
-		unsigned day;
-		unsigned month;
-		int year;
-	} DATE;
 
-	typedef struct {
-		unsigned hour;
-		unsigned minute;
-	} TIME;
+	std::string convertTo2Digits(unsigned num) {
+		if (num < 10) return "0" + std::to_string(num);
+		return std::to_string(num);
+	}
 
 	unsigned long long toSeconds(unsigned hour, unsigned minute) {
 		return minute * 60 + hour * 60 * 60;
