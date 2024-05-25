@@ -26,3 +26,6 @@ fileReader::~fileReader() {
 }
 
 std::vector<std::string> fileReader::getData() { return this->data; };
+
+void fileReader::addTodoRecord(const std::string record) {
+}

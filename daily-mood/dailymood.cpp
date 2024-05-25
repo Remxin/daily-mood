@@ -49,8 +49,10 @@ void dailymood::openEventDialog() {
             // Zapisywanie danych do pliku, oddzielone tabulatorami
             QTextStream out(&file);
             out << formattedDate << "\t" << name << "\t" << time.toString() << "\t0\n";
+            this->applicationData->addTodo(formattedDate.toStdString() + "\t" + name.toStdString() + "\t" + time.toString().toStdString() + "\t" + "0");
             // Zamykanie pliku
             file.close();
+            this->onDateChanged();
         }
         else {
             QMessageBox::warning(this, "Error", "Failed to open the file for writing.");
@@ -71,20 +73,3 @@ void dailymood::onDateChanged() {
     //updateTodoCards(selectedDate);
 }
 
-//void dailymood::updateTodoCards(const QString& selectedDateString) {
-//     Clear the existing layout
-//    QLayoutItem* item;
-//    while ((item = this->layout->takeAt(0)) != nullptr) {
-//        delete item->widget(); // delete the widget
-//        delete item; // delete the layout item
-//    }
-//
-//     Get todos and display them based on the selected date
-//    std::vector<Todo> todos = this->applicationData->getTodos();
-//    for (Todo &todo : todos) {
-//        if (QString::fromStdString(todo.getDate()) == selectedDateString) {
-//            TodoCard* todoCard = new TodoCard(todo);
-//            layout->addWidget(todoCard);
-//        }
-//    }
-//}
