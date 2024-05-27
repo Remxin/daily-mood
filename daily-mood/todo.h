@@ -13,6 +13,7 @@ private:
     std::string name;
     bool done;
 
+
 public:
     // Constructors
     Todo(std::string s);
@@ -29,6 +30,11 @@ public:
     std::string getName();
     bool getDone();
     date::DATE getDateObj();
+    unsigned getMinute();
+    unsigned getHour();
+
+    // for writing to file
+    friend std::ostream& operator<<(std::ostream& os, Todo& todo);
 };
 
 #endif // TODO_H

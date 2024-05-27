@@ -53,7 +53,8 @@ std::string Todo::toString() {
 
 void Todo::toggleDone() {
 	if (this->done) this->done = false;
-	this->done = true;
+	else this->done = true;
+
 }
 
 void Todo::setTime(unsigned hour, unsigned minute) {
@@ -83,4 +84,12 @@ bool Todo::getDone() { return this->done; };
 
 date::DATE Todo::getDateObj() {
 	return this->date;
+}
+
+unsigned Todo::getHour() { return this->time.hour; };
+unsigned Todo::getMinute() { return this->time.minute; };
+
+std::ostream& operator<<(std::ostream& os, Todo &todo) {
+	os << todo.toString();
+	return os;
 }

@@ -8,10 +8,6 @@ appData::appData(std::vector<std::string> initialData, std::string initialDate) 
         this->addTodo(d);
 	}
 
-    std::vector<std::string> date = helpers::split(initialDate, '/');
-    this->date.day = std::stoi(date[0]);
-    this->date.month = std::stoi(date[1]);
-    this->date.year = std::stoi(date[2]);
 
     QVBoxLayout* layout = new QVBoxLayout(this->todoScroll);
     this->layout = layout;
@@ -26,7 +22,7 @@ void appData::displayTodos() {
     // Create a QVBoxLayout for the todoScroll widget
     
     // displaying todos and moods
-    for (Todo td : this->todos) {
+    for (Todo &td : this->todos) {
         date::DATE tdDate = td.getDateObj();
         if (this->date.day != tdDate.day || this->date.month != tdDate.month || this->date.year != tdDate.year) continue;
         TodoCard* todoCard = new TodoCard(td);
@@ -61,3 +57,7 @@ void appData::setDate(std::string newDate) {
 }
 
 std::vector<Todo> appData::getTodos() { return this->todos; };
+
+void appData::sort() {
+    helpers::todoQuicksort(this->todos, 0, this->todos.size() - 1);
+}

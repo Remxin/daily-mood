@@ -1,5 +1,6 @@
 #include "dailymood.h"
-
+#include <QObject>
+#include <QWidget>
 #include <QtWidgets/QApplication>
 
 
