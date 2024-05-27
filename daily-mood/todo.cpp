@@ -53,7 +53,8 @@ std::string Todo::toString() {
 
 void Todo::toggleDone() {
 	if (this->done) this->done = false;
-	this->done = true;
+	else this->done = true;
+
 }
 
 void Todo::setTime(unsigned hour, unsigned minute) {

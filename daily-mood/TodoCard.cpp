@@ -1,7 +1,7 @@
 #include "TodoCard.h"
 
 
-TodoCard::TodoCard(Todo todo, QWidget* parent) : QWidget(parent), m_todo(todo)
+TodoCard::TodoCard(Todo &todo, QWidget* parent) : QWidget(parent), m_todo(todo)
 {
     // Create layout for the TodoCard
     QHBoxLayout* layout = new QHBoxLayout(this);
@@ -27,7 +27,7 @@ TodoCard::TodoCard(Todo todo, QWidget* parent) : QWidget(parent), m_todo(todo)
 
 void TodoCard::onActionButtonClicked() {
 
-    if (this->doneButton->text() == "Done") {
+    if (!this->m_todo.getDone()) {
         this->doneButton->setText("Undo");
     }
     else {

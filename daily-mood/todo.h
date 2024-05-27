@@ -13,6 +13,7 @@ private:
     std::string name;
     bool done;
 
+
 public:
     // Constructors
     Todo(std::string s);

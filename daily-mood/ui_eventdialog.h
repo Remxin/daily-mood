@@ -49,6 +49,8 @@ public:
         labelDate->setObjectName(QString::fromUtf8("labelDate"));
         verticalLayout->addWidget(labelDate);
         dateEdit = new QDateEdit(EventDialog);
+        QDate currentDate = QDate::currentDate();
+        dateEdit->setDate(currentDate);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
         verticalLayout->addWidget(dateEdit);
         labelTime = new QLabel(EventDialog);
@@ -56,6 +58,8 @@ public:
         verticalLayout->addWidget(labelTime);
         timeEdit = new QTimeEdit(EventDialog);
         timeEdit->setObjectName(QString::fromUtf8("timeEdit"));
+        QTime currentTime = QTime::currentTime();
+        timeEdit->setTime(currentTime);
         verticalLayout->addWidget(timeEdit);
         buttonBox = new QDialogButtonBox(EventDialog);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
