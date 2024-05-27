@@ -17,6 +17,7 @@ dailymood::dailymood(QWidget* parent)
 
     // getting text data
     fileReader freader("data.txt");
+    this->freader = &freader;
     std::vector<std::string> moodTextData = freader.getData();
 
     //// adding todos and moods
@@ -27,7 +28,13 @@ dailymood::dailymood(QWidget* parent)
     connect(ui.addTodoButton, &QPushButton::clicked, this, &dailymood::addBtnClicked);
 }
 
-dailymood::~dailymood() {}
+dailymood::~dailymood() {
+    this->applicationData->sort();
+    this->freader->writeTodos(this->applicationData->getTodos());
+    delete this->applicationData;
+    delete this->freader;
+
+}
 
 void dailymood::addBtnClicked() {
     openEventDialog();

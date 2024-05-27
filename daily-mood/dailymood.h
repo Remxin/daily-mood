@@ -9,6 +9,7 @@
 #include "appData.h"
 #include "todo.h"
 #include "fileReader.h"
+#include "helpers.h"
 
 class dailymood : public QMainWindow
 {
@@ -20,7 +21,9 @@ public:
 
 private:
     Ui::dailymoodClass ui;
+    fileReader* freader;
     appData *applicationData;
+ 
     void updateTodoCards(const QString& selectedDateString);
 
 

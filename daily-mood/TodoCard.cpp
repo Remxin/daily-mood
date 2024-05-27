@@ -11,20 +11,10 @@ TodoCard::TodoCard(Todo todo, QWidget* parent) : QWidget(parent), m_todo(todo)
     QLabel* timeLabel = new QLabel(QString::fromStdString(todo.getTime())); // Using QString for conversion
 
     // Create button for interaction (e.g., mark as done)
-    QPushButton* doneButton = new QPushButton("Done");
+    QPushButton* doneButton = new QPushButton(todo.getDone() ? "Undo" : "Done");
     this->doneButton = doneButton;
-    connect(doneButton, &QPushButton::clicked, this, [this]() {
-        // Emit signal to notify that the todo is marked as done
-        emit todoMarkedAsDone(m_todo);
-
-        if (this->doneButton->text() == "Done") {
-            this->doneButton->setText("Undo");
-        }
-        else {
-            this->doneButton->setText("Done");
-        }
-        m_todo.toggleDone();
-        });
+    this->m_todo = todo;
+    connect(doneButton, SIGNAL(clicked()), this, SLOT(onActionButtonClicked()));
 
     // Add widgets to layout
     layout->addWidget(titleLabel);
@@ -34,3 +24,16 @@ TodoCard::TodoCard(Todo todo, QWidget* parent) : QWidget(parent), m_todo(todo)
     // Set layout to the widget
     setLayout(layout);
 }
+
+void TodoCard::onActionButtonClicked() {
+
+    if (this->doneButton->text() == "Done") {
+        this->doneButton->setText("Undo");
+    }
+    else {
+        this->doneButton->setText("Done");
+    }
+    this->m_todo.toggleDone();
+
+}
+

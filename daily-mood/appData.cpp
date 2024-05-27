@@ -61,3 +61,7 @@ void appData::setDate(std::string newDate) {
 }
 
 std::vector<Todo> appData::getTodos() { return this->todos; };
+
+void appData::sort() {
+    helpers::todoQuicksort(this->todos, 0, this->todos.size() - 1);
+}

@@ -14,12 +14,15 @@ public:
     TodoCard(Todo todo, QWidget* parent = nullptr);
     // Constructor taking Todo object
 
-signals:
-    void todoMarkedAsDone(const Todo& todo); // Signal emitted when the todo is marked as done
+signals:// Signal emitted when the todo is marked as done
+  
 
+private slots:
+    void onActionButtonClicked();
 private:
     Todo m_todo; // Member variable to store the Todo object
     QPushButton* doneButton;
+    
 };
 
 #endif // TODOCARD_H

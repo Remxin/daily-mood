@@ -27,6 +27,7 @@ public:
 	void displayTodos(QWidget* todoScroll);
 	void displayTodos();
 	void clearTodos();
+	void sort();
 
 	// setters
 	void addTodo(std::string data);
