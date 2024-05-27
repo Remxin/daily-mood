@@ -29,7 +29,7 @@ namespace helpers {
         int i = low - 1;
         for (int j = low; j <= high - 1; j++) {
             Todo curr = arr[j];
-            if (date::toSeconds(curr.getHour(), curr.getMinute())) {
+            if (date::toSeconds(curr.getHour(), curr.getMinute())<pivot) {
                 i++;
                 todoSwap(arr[i], arr[j]);
             }
