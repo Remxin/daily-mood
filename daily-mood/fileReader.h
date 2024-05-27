@@ -14,7 +14,7 @@
 class fileReader {
 private:
     std::vector<std::string> data;
-    std::fstream file;
+    //std::fstream file;
 
 public:
     // Constructor

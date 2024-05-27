@@ -31,8 +31,6 @@ dailymood::dailymood(QWidget* parent)
 dailymood::~dailymood() {
     this->applicationData->sort();
     this->freader->writeTodos(this->applicationData->getTodos());
-    delete this->applicationData;
-    delete this->freader;
 
 }
 

@@ -8,31 +8,34 @@
 
 
 fileReader::fileReader(const std::string& filename) {
-    this->file.open(filename);
-    if (!this->file.is_open()) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
         std::cerr << "Failed to open the file." << std::endl;
     }
     else {
         std::string line;
-        while (std::getline(this->file, line)) {
+        while (std::getline(file, line)) {
             data.push_back(line);
         }
     }
+    file.close();
 }
 
 fileReader::~fileReader() {
-    if (this->file.is_open()) {
-        this->file.close();
-    }
+  /*  if (file.is_open()) {
+        file.close();
+    }*/
 }
 
 std::vector<std::string> fileReader::getData() { return this->data; };
 
 void fileReader::writeTodos(const std::vector<Todo> todos) {
-    if (!this->file.is_open()) return;
+    std::ofstream wfile("data.txt");
+    if (!wfile.is_open()) return;
     for (Todo todo : todos) {
-        this->file << todo << std::endl;
+        wfile << todo.toString() << std::endl;
     }
+    wfile.close();
 }
 
 void fileReader::addTodoRecord(const std::string record) {
