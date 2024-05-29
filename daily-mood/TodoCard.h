@@ -18,7 +18,7 @@ public:
 private slots:
     void onActionButtonClicked();
 private:
-    Todo m_todo; // Member variable to store the Todo object
+    Todo &m_todo; // Member variable to store the Todo object
     QPushButton* doneButton;
     
 };

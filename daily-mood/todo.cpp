@@ -47,7 +47,7 @@ Todo::Todo(unsigned day, unsigned month, int year, unsigned hour, unsigned minut
 
 std::string Todo::toString() {
 	std::stringstream ss;
-	ss << this->date.day << "/" << this->date.month << "/" << this->date.year << "\t" << this->name << "\t" << this->time.hour << ":" << this->time.hour << "\t" << this->done;
+	ss << this->date.day << "/" << this->date.month << "/" << this->date.year << "\t" << this->name << "\t" << this->time.hour << ":" << this->time.hour << "\t" << (int)this->done;
 	return ss.str();
 }
 
