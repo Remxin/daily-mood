@@ -24,6 +24,7 @@ namespace date {
     } TIME;
 
     // Function prototypes
+    std::string getTodaysDateStr();
     std::string convertTo2Digits(unsigned num);
     unsigned long long toSeconds(unsigned hour, unsigned minute);
     unsigned long long toSeconds(unsigned day, unsigned month, int year);

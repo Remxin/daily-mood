@@ -29,6 +29,8 @@ public:
     // methods
     void addTodoRecord(const std::string record);
     void writeTodos(const std::vector<Todo> todos);
+    void addMoodRecord(const std::string record);
+
     // Getter
     std::vector<std::string> getTodoData();
     std::vector<std::string> getMoodData();

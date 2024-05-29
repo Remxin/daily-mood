@@ -85,7 +85,7 @@ void dailymood::onDateChanged() {
 void dailymood::openUpdateMoodDialog() {
     AddMoodDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
-    
+        this->freader->addMoodRecord(date::getTodaysDateStr() + "\t" + std::to_string(dialog.getRating()) + "\t" + dialog.getDescription() + "\n");
     }
 }
 

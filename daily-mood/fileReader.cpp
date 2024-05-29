@@ -1,4 +1,4 @@
-#include "fileReader.h"
+﻿#include "fileReader.h"
 #include "todo.h"
 #include <iostream>
 #include <fstream>
@@ -52,4 +52,16 @@ void fileReader::writeTodos(const std::vector<Todo> todos) {
 }
 
 void fileReader::addTodoRecord(const std::string record) {
+}
+
+void fileReader::addMoodRecord(const std::string record) {
+    std::ofstream file(MOODFILENAME, std::ios::app);
+
+    if (file.is_open()) {
+        file << record << std::endl;
+    }
+    else {
+        std::cerr << "Nie można otworzyć pliku";
+    }
+    file.close();
 }
