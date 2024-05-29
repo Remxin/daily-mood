@@ -10,6 +10,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_dailymood.h"
 #include "helpers.h"
+#include "mood.h"
 
 
 
@@ -29,6 +30,7 @@ public:
     // methods
     void addTodoRecord(const std::string record);
     void writeTodos(const std::vector<Todo> todos);
+    void writeMoods(const std::vector<Mood> moods);
     void addMoodRecord(const std::string record);
 
     // Getter

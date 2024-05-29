@@ -18,7 +18,6 @@ dailymood::dailymood(QWidget* parent)
     // getting text data
     fileReader freader;
     this->freader = &freader;
-    std::vector<std::string> todoTextData = freader.getTodoData();
     
 
     //// adding todos and moods
@@ -33,6 +32,7 @@ dailymood::dailymood(QWidget* parent)
 dailymood::~dailymood() {
     this->applicationData->sort();
     this->freader->writeTodos(this->applicationData->getTodos());
+    this->freader->writeMoods(this->applicationData->getMoods());
 
 }
 
@@ -79,13 +79,12 @@ void dailymood::onDateChanged() {
     this->applicationData->setDate(selectedDate.toStdString());
     this->applicationData->clearTodos();
     this->applicationData->displayTodos();
-    //updateTodoCards(selectedDate);
 }
 
 void dailymood::openUpdateMoodDialog() {
     AddMoodDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
-        this->freader->addMoodRecord(date::getTodaysDateStr() + "\t" + std::to_string(dialog.getRating()) + "\t" + dialog.getDescription() + "\n");
+        this->applicationData->addMood(date::getTodaysDateStr(), dialog.getRating(), dialog.getDescription());
     }
 }
 

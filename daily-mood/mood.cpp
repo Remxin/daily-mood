@@ -47,3 +47,11 @@ std::string Mood::getDate() {
 unsigned Mood::getRating() { return this->rating; };
 std::string Mood::getDescription() { return this->description; };
 
+
+date::DATE Mood::getDateObj() { return this->date; };
+
+void Mood::updateRank(unsigned rating, std::string description) {
+	this->rating = rating;
+	this->description = description;
+}
+

@@ -35,6 +35,7 @@ private:
 
     // methods
     void setButtonAvailability();
+  
 };
 
 #endif // AddMoodDialog_H

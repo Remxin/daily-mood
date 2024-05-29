@@ -20,7 +20,7 @@ namespace date {
 		retDate.month = localTime.tm_mon + 1;
 		retDate.day = localTime.tm_mday;
 
-		return std::to_string(localTime.tm_year + 1900) + std::to_string(localTime.tm_mon + 1) + std::to_string(localTime.tm_mday);
+		return std::to_string(localTime.tm_mday) + "/" + std::to_string(localTime.tm_mon + 1) + "/" + std::to_string(localTime.tm_year + 1900);
 	}
 
 	std::string convertTo2Digits(unsigned num) {
