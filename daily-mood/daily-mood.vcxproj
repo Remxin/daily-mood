@@ -108,7 +108,8 @@
     <QtUic Include="EventDialog.ui" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data.txt" />
+    <Text Include="mood.txt" />
+    <Text Include="todo.txt" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="EventDialog.h" />

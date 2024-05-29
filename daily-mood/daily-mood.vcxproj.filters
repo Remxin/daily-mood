@@ -117,7 +117,10 @@
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="data.txt">
+    <Text Include="todo.txt">
+      <Filter>Data</Filter>
+    </Text>
+    <Text Include="mood.txt">
       <Filter>Data</Filter>
     </Text>
   </ItemGroup>
