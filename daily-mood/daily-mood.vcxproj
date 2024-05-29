@@ -92,6 +92,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AddMoodDialog.cpp" />
     <ClCompile Include="appData.cpp" />
     <ClCompile Include="helpers.cpp" />
     <ClCompile Include="mood.cpp" />
@@ -115,6 +116,7 @@
     <QtMoc Include="EventDialog.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="AddMoodDialog.h" />
     <ClInclude Include="appData.h" />
     <ClInclude Include="date.h" />
     <ClInclude Include="fileReader.h" />
@@ -126,6 +128,10 @@
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="daily-mood.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\Desktop\star-blank.png" />
+    <Image Include="..\..\..\..\..\..\Desktop\star.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

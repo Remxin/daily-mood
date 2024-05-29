@@ -26,7 +26,8 @@ dailymood::dailymood(QWidget* parent)
     this->applicationData->displayTodos(todoScroll);
 
     connect(calendar, &QCalendarWidget::selectionChanged, this, &dailymood::onDateChanged);
-    connect(ui.addTodoButton, &QPushButton::clicked, this, &dailymood::addBtnClicked);
+    connect(ui.updateMoodBtn, SIGNAL(clicked()), this, SLOT(openUpdateMoodDialog()));
+    connect(ui.addTodoButton, &QPushButton::clicked, this, &dailymood::addTodoBtnClicked);
 }
 
 dailymood::~dailymood() {
@@ -35,11 +36,11 @@ dailymood::~dailymood() {
 
 }
 
-void dailymood::addBtnClicked() {
-    openEventDialog();
+void dailymood::addTodoBtnClicked() {
+    openAddTodoDialog();
 }
 
-void dailymood::openEventDialog() {
+void dailymood::openAddTodoDialog() {
     EventDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
         QString name = dialog.getName();
@@ -70,6 +71,8 @@ void dailymood::openEventDialog() {
     }
 }
 
+
+
 void dailymood::onDateChanged() {
     QCalendarWidget* calendar = ui.calendarWidget;
     QString selectedDate = calendar->selectedDate().toString("dd/MM/yyyy");
@@ -77,5 +80,12 @@ void dailymood::onDateChanged() {
     this->applicationData->clearTodos();
     this->applicationData->displayTodos();
     //updateTodoCards(selectedDate);
+}
+
+void dailymood::openUpdateMoodDialog() {
+    AddMoodDialog dialog(this);
+    if (dialog.exec() == QDialog::Accepted) {
+    
+    }
 }
 
