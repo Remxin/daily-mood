@@ -3,10 +3,14 @@
 
 
 
-appData::appData(std::vector<std::string> initialData, std::string initialDate) {
-	for (std::string d : initialData) {
+appData::appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate) {
+	for (std::string d : todoData) {
         this->addTodo(d);
 	}
+
+    for (std::string d : moodData) {
+        this->addMood(d);
+    }
 
 
     QVBoxLayout* layout = new QVBoxLayout(this->todoScroll);
@@ -46,7 +50,7 @@ void appData::addTodo(std::string data) {
 };
 
 void appData::addMood(std::string data) {
-    //this->moods.push_back(Mood(data));
+    this->moods.push_back(Mood(data));
 }
 
 void appData::setDate(std::string newDate) {

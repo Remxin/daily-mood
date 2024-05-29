@@ -5,32 +5,45 @@
 #include <string>
 #include <vector>
 
+std::string TODOFILENAME = "todo.txt";
+std::string MOODFILENAME = "mood.txt";
 
-
-fileReader::fileReader(const std::string& filename) {
-    std::ifstream file(filename);
+fileReader::fileReader() {
+    // for todos
+    std::ifstream file(TODOFILENAME);
     if (!file.is_open()) {
         std::cerr << "Failed to open the file." << std::endl;
     }
     else {
         std::string line;
         while (std::getline(file, line)) {
-            data.push_back(line);
+            todoData.push_back(line);
+        }
+    }
+    file.close();
+
+    // for mood
+    std::ifstream mfile(MOODFILENAME);
+    if (!mfile.is_open()) {
+        std::cerr << "Failed to open the file." << std::endl;
+    }
+    else {
+        std::string line;
+        while (std::getline(mfile, line)) {
+            moodData.push_back(line);
         }
     }
     file.close();
 }
 
 fileReader::~fileReader() {
-  /*  if (file.is_open()) {
-        file.close();
-    }*/
 }
 
-std::vector<std::string> fileReader::getData() { return this->data; };
+std::vector<std::string> fileReader::getTodoData() { return this->todoData; };
+std::vector<std::string> fileReader::getMoodData() { return this->moodData; };
 
 void fileReader::writeTodos(const std::vector<Todo> todos) {
-    std::ofstream wfile("data.txt");
+    std::ofstream wfile(TODOFILENAME);
     if (!wfile.is_open()) return;
     for (Todo todo : todos) {
         wfile << todo.toString() << std::endl;

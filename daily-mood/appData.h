@@ -22,7 +22,7 @@ private:
 	QCalendarWidget* calendar;
 
 public:
-	appData(std::vector<std::string> initialData, std::string initialDate);
+	appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate);
 	// methods
 	void displayTodos(QWidget* todoScroll);
 	void displayTodos();

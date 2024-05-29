@@ -3,6 +3,7 @@
 #ifndef MOOD_H
 #define MOOD_H
 #include "date.h"
+#include "helpers.h"
 #include <string>
 #include <sstream>
 
@@ -16,6 +17,7 @@ private:
 
 public:
 	Mood(unsigned day, unsigned month, int year, unsigned rating, std::string description);
+	Mood(std::string data);
 	void setRating(unsigned rating);
 
 	// getters

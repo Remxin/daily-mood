@@ -1,1 +1,3 @@
-﻿  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\x64\Debug\daily-mood.exe
+﻿  dailymood.cpp
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x8c0 that is illegal in the current source character set (codepage 65001).
+  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\projekt-koncowy\x64\Debug\daily-mood.exe

@@ -11,14 +11,17 @@
 #include "ui_dailymood.h"
 #include "helpers.h"
 
+
+
 class fileReader {
 private:
-    std::vector<std::string> data;
+    std::vector<std::string> todoData;
+    std::vector<std::string> moodData;
     //std::fstream file;
 
 public:
     // Constructor
-    fileReader(const std::string& filename);
+    fileReader();
 
     // Destructor
     ~fileReader();
@@ -27,7 +30,8 @@ public:
     void addTodoRecord(const std::string record);
     void writeTodos(const std::vector<Todo> todos);
     // Getter
-    std::vector<std::string> getData();
+    std::vector<std::string> getTodoData();
+    std::vector<std::string> getMoodData();
 };
 
 #endif // FILEREADER_H

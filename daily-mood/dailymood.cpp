@@ -16,12 +16,13 @@ dailymood::dailymood(QWidget* parent)
 
 
     // getting text data
-    fileReader freader("data.txt");
+    fileReader freader;
     this->freader = &freader;
-    std::vector<std::string> moodTextData = freader.getData();
+    std::vector<std::string> todoTextData = freader.getTodoData();
+    
 
     //// adding todos and moods
-    this->applicationData = new appData(moodTextData, selectedDate);
+    this->applicationData = new appData(freader.getTodoData(), freader.getMoodData(), selectedDate);
     this->applicationData->displayTodos(todoScroll);
 
     connect(calendar, &QCalendarWidget::selectionChanged, this, &dailymood::onDateChanged);
