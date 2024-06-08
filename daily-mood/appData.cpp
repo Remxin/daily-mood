@@ -15,6 +15,11 @@ appData::appData(std::vector<std::string> todoData, std::vector<std::string> moo
 
     QVBoxLayout* layout = new QVBoxLayout(this->todoScroll);
     this->layout = layout;
+
+    std::vector<std::string> dateParts = helpers::split(initialDate, '/');
+    this->date.day = std::stoi(dateParts[0]);
+    this->date.month = std::stoi(dateParts[1]);
+    this->date.year = std::stoi(dateParts[2]);
 }
 
 void appData::displayTodos(QWidget* todoScroll) {
