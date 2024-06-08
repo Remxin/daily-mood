@@ -11,19 +11,32 @@
 
 
 Todo::Todo(std::string s) {
-	std::vector<std::string> splited = helpers::split(s, '\t');
+	try {
+		std::vector<std::string> splited = helpers::split(s, '\t');
+		if (splited.size() < 4) throw errors::WrongFileFormat();
+		std::vector<std::string> date = helpers::split(splited[0], '/');
+		if (date.size() < 3) throw errors::WrongDateFormat();
+		std::vector<std::string> time = helpers::split(splited[2], ':');
+		if (time.size() < 2) throw errors::WrongTimeFormat();
+		this->date.day = std::stoi(date[0]);
+		this->date.month = std::stoi(date[1]);
+		this->date.year = std::stoi(date[2]);
 
-	std::vector<std::string> date = helpers::split(splited[0], '/');
-	std::vector<std::string> time = helpers::split(splited[2], ':');
-	this->date.day = std::stoi(date[0]);
-	this->date.month = std::stoi(date[1]);
-	this->date.year = std::stoi(date[2]);
+		this->time.hour = std::stoi(time[0]);
+		this->time.minute = std::stoi(time[1]);
 
-	this->time.hour = std::stoi(time[0]);
-	this->time.minute = std::stoi(time[1]);
-
-	this->name = splited[1];
-	this->done = std::stoi(splited[3]);
+		this->name = splited[1];
+		this->done = std::stoi(splited[3]);
+	}
+	catch (errors::WrongFileFormat& err) {
+		errors::display(QString::fromStdString(err.what()));
+	}
+	catch (errors::WrongDateFormat& err) {
+		errors::display(QString::fromStdString(err.what()));
+	}
+	catch (errors::WrongTimeFormat& err) {
+		errors::display(QString::fromStdString(err.what()));
+	}
 
 }
 

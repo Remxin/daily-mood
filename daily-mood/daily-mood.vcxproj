@@ -94,6 +94,7 @@
   <ItemGroup>
     <ClCompile Include="AddMoodDialog.cpp" />
     <ClCompile Include="appData.cpp" />
+    <ClCompile Include="errors.cpp" />
     <ClCompile Include="helpers.cpp" />
     <ClCompile Include="mood.cpp" />
     <ClCompile Include="date.cpp" />
@@ -119,6 +120,7 @@
     <QtMoc Include="AddMoodDialog.h" />
     <ClInclude Include="appData.h" />
     <ClInclude Include="date.h" />
+    <ClInclude Include="errors.h" />
     <ClInclude Include="fileReader.h" />
     <ClInclude Include="helpers.h" />
     <QtMoc Include="TodoCard.h" />
