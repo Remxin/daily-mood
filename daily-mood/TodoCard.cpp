@@ -7,21 +7,37 @@ TodoCard::TodoCard(Todo &todo, QWidget* parent) : QWidget(parent), m_todo(todo)
     QHBoxLayout* layout = new QHBoxLayout(this);
 
     // Create labels for displaying Todo details
-    QLabel* titleLabel = new QLabel(QString::fromStdString(todo.getName())); // Using QString for conversion // Using QString for conversion
-    QLabel* timeLabel = new QLabel(QString::fromStdString(todo.getTime())); // Using QString for conversion
+    QLabel* titleLabel = new QLabel(QString::fromStdString(todo.getName())); 
+    titleLabel->setObjectName("todoName");
+    titleLabel->setStyleSheet("QLabel#todoName {"
+        "color: black;"
+        "font-size: 13px;"
+        "}");
+    QLabel* timeLabel = new QLabel(QString::fromStdString(todo.getTime()));
+    timeLabel->setObjectName("todoTime");
+    timeLabel->setStyleSheet("QLabel#todoTime {"
+        "color: gray;"
+        "font-size: 10px;"
+        "font-weight: light;"
+    "}");
 
     // Create button for interaction (e.g., mark as done)
     QPushButton* doneButton = new QPushButton(todo.getDone() ? "Undo" : "Done");
-    doneButton->setStyleSheet("QPushButton#myButton {"
-        "    background-color: lime;"
+    doneButton->setObjectName("toggleTodoBtn");
+    doneButton->setStyleSheet("QPushButton#toggleTodoBtn {"
+        "    background-color: #63BF93;"
         "    color: white;"
-        "    border: 2px solid black;"
+        "    border: 0.5px solid black;"
         "    border-radius: 5px;"
         "    padding: 5px 10px;"
+        "    font-weight: bold;"
+        "    font-size: 13px;"
+        "    transition: 0.3s all;"  
         "}"
-        "QPushButton#myButton:hover {"
-        "    background-color: darkred;"
-        "}");
+        "QPushButton#toggleTodoBtn:hover {"
+        "    background-color: #245741;"
+        "}");;
+
 
     this->doneButton = doneButton;
     this->m_todo = todo;
