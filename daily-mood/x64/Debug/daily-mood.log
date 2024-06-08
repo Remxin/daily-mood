@@ -1,7 +1,4 @@
-﻿  AddMoodDialog.cpp
+﻿  MoodCard.cpp
   dailymood.cpp
-  fileReader.cpp
-  main.cpp
-C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x922 that is illegal in the current source character set (codepage 65001).
-  moc_dailymood.cpp
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x985 that is illegal in the current source character set (codepage 65001).
   daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\x64\Debug\daily-mood.exe

@@ -7,6 +7,7 @@
 #include <string>
 #include <qwidget.h>
 #include "TodoCard.h"
+#include "MoodCard.h"
 #include <QtWidgets/QApplication>
 #include <qboxlayout.h>
 #include <QCalendarWidget>
@@ -18,7 +19,9 @@ private:
 	std::vector<Mood> moods;
 	date::DATE date;
 	QWidget* todoScroll;
-	QVBoxLayout* layout;
+	//QVBoxLayout* moodScroll;
+	QVBoxLayout* todoLayout;
+	QVBoxLayout* moodLayout;
 	QCalendarWidget* calendar;
 
 	// methods
@@ -30,6 +33,8 @@ public:
 	// methods
 	void displayTodos(QWidget* todoScroll);
 	void displayTodos();
+	void displayMood(QVBoxLayout* moodScroll);
+	void displayMood();
 	void clearTodos();
 	void sort();
 

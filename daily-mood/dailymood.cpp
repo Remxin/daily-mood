@@ -10,6 +10,7 @@ dailymood::dailymood(QWidget* parent)
     ui.setupUi(this);
     // accessing ui components
     QWidget* todoScroll = ui.todosScroll;
+    QVBoxLayout* moodScroll = ui.moodScroll;
 
     QCalendarWidget* calendar = ui.calendarWidget;
     std::string selectedDate = calendar->selectedDate().toString("dd/MM/yyyy").toStdString();
@@ -23,6 +24,7 @@ dailymood::dailymood(QWidget* parent)
     //// adding todos and moods
     this->applicationData = new appData(freader.getTodoData(), freader.getMoodData(), selectedDate);
     this->applicationData->displayTodos(todoScroll);
+    this->applicationData->displayMood(moodScroll);
 
     connect(calendar, &QCalendarWidget::selectionChanged, this, &dailymood::onDateChanged);
     connect(ui.updateMoodBtn, SIGNAL(clicked()), this, SLOT(openUpdateMoodDialog()));
@@ -79,6 +81,7 @@ void dailymood::onDateChanged() {
     this->applicationData->setDate(selectedDate.toStdString());
     this->applicationData->clearTodos();
     this->applicationData->displayTodos();
+    this->applicationData->displayMood();
 }
 
 void dailymood::openUpdateMoodDialog() {

@@ -13,8 +13,11 @@ appData::appData(std::vector<std::string> todoData, std::vector<std::string> moo
     }
 
 
-    QVBoxLayout* layout = new QVBoxLayout(this->todoScroll);
-    this->layout = layout;
+    QVBoxLayout* todoLayout = new QVBoxLayout(this->todoScroll);
+    this->todoLayout = todoLayout;
+
+    //QVBoxLayout* moodLayout = new QVBoxLayout(this->moodScroll);
+    //this->moodLayout = moodLayout;
 
     std::vector<std::string> dateParts = helpers::split(initialDate, '/');
     this->date.day = std::stoi(dateParts[0]);
@@ -33,14 +36,34 @@ void appData::displayTodos() {
         date::DATE tdDate = td.getDateObj();
         if (this->date.day != tdDate.day || this->date.month != tdDate.month || this->date.year != tdDate.year) continue;
         TodoCard* todoCard = new TodoCard(td);
-        this->layout->addWidget(todoCard);
+        this->todoLayout->addWidget(todoCard);
     }
-    this->todoScroll->setLayout(this->layout);
+    this->todoScroll->setLayout(this->todoLayout);
+}
+
+void appData::displayMood(QVBoxLayout* moodScroll) {
+    this->moodLayout = moodScroll;
+    this->displayMood();
+}
+
+void appData::displayMood() {
+    QLayoutItem* item;
+    while (item = this->moodLayout->takeAt(0)) {
+        delete item->widget();
+        delete item;
+    }
+
+    for (Mood& mood : this->moods) {
+        date::DATE tdDate = mood.getDateObj();
+        if (this->date.day != tdDate.day || this->date.month != tdDate.month || this->date.year != tdDate.year) continue;
+        MoodCard* moodCard = new MoodCard(mood);
+        this->moodLayout->addWidget(moodCard);
+    }
 }
 
 void appData::clearTodos() {
     QLayoutItem* item;
-    while ((item = this->layout->takeAt(0)) != nullptr) {
+    while ((item = this->todoLayout->takeAt(0)) != nullptr) {
         delete item->widget(); // delete the widget
         delete item; // delete the layout item
     }
