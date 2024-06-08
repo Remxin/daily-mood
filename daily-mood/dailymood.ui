@@ -57,7 +57,7 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="updateMoodBtn">
        <property name="text">
         <string>UPDATE MOOD</string>
        </property>

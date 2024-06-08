@@ -3,6 +3,7 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_dailymood.h"
 #include "EventDialog.h"  
+#include "AddMoodDialog.h"
 
 
 #include "TodoCard.h"
@@ -24,11 +25,12 @@ private:
     fileReader* freader;
     appData *applicationData;
  
-    void updateTodoCards(const QString& selectedDateString);
+    
 
 
 private slots:
-    void addBtnClicked();
-    void openEventDialog();
+    void addTodoBtnClicked();
+    void openAddTodoDialog();
+    void openUpdateMoodDialog();
     void onDateChanged();
 };

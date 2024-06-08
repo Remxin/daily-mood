@@ -36,6 +36,9 @@
     <Filter Include="Source Files\Components">
       <UniqueIdentifier>{2fca1bda-1bdc-423f-9091-67db150971b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{3b91a651-c95d-4be0-bb0b-6943a0693394}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="dailymood.qrc">
@@ -79,6 +82,9 @@
     <ClCompile Include="appData.cpp">
       <Filter>Source Files\Classes</Filter>
     </ClCompile>
+    <ClCompile Include="AddMoodDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ui_eventdialog.h">
@@ -115,6 +121,9 @@
     <QtMoc Include="TodoCard.h">
       <Filter>Header Files</Filter>
     </QtMoc>
+    <QtMoc Include="AddMoodDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <Text Include="todo.txt">
@@ -128,5 +137,13 @@
     <ResourceCompile Include="daily-mood.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\..\..\Desktop\star-blank.png">
+      <Filter>Assets</Filter>
+    </Image>
+    <Image Include="..\..\..\..\..\..\Desktop\star.png">
+      <Filter>Assets</Filter>
+    </Image>
   </ItemGroup>
 </Project>

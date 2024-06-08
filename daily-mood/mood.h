@@ -25,6 +25,10 @@ public:
 	std::string getDate();
 	unsigned getRating();
 	std::string getDescription();
+	date::DATE getDateObj();
+
+	// setters
+	void updateRank(unsigned rating, std::string description);
 
 };
 
