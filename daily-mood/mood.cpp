@@ -15,15 +15,25 @@ Mood::Mood(unsigned day, unsigned month, int year, unsigned rating, std::string 
 }
 
 Mood::Mood(std::string data) {
-	std::vector<std::string> splited = helpers::split(data, '\t');
-	std::vector<std::string> date = helpers::split(splited[0], '/');
+	try {
+		std::vector<std::string> splited = helpers::split(data, '\t');
+		if (splited.size() < 3) throw errors::WrongFileFormat();
+		std::vector<std::string> date = helpers::split(splited[0], '/');
+		if (date.size() < 3) throw errors::WrongDateFormat();
 
-	this->date.day = std::stoi(date[0]);
-	this->date.month = std::stoi(date[1]);
-	this->date.year = std::stoi(date[2]);
+		this->date.day = std::stoi(date[0]);
+		this->date.month = std::stoi(date[1]);
+		this->date.year = std::stoi(date[2]);
 
-	this->rating = std::stoi(splited[1]);
-	this->description = splited[2];
+		this->rating = std::stoi(splited[1]);
+		this->description = splited[2];
+	}
+	catch (errors::WrongFileFormat& msg) {
+		errors::display(QString::fromStdString(msg.what()));
+	}
+	catch (errors::WrongDateFormat& msg) {
+		errors::display(QString::fromStdString(msg.what()));
+	}
 
 }
 

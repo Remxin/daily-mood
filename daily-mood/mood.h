@@ -6,6 +6,7 @@
 #include "helpers.h"
 #include <string>
 #include <sstream>
+#include "errors.h"
 
 
 

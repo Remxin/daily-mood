@@ -5,6 +5,7 @@
 #include <string>
 #include "helpers.h"
 #include "date.h"
+#include "errors.h"
 
 class Todo {
 private:
