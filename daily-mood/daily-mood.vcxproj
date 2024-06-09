@@ -128,7 +128,7 @@
     <ClInclude Include="mood.h" />
     <QtMoc Include="MoodCard.h" />
     <ClInclude Include="todo.h" />
-    <ClInclude Include="ui_eventdialog.h" />
+    <QtMoc Include="ui_eventdialog.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="daily-mood.rc" />

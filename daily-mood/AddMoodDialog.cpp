@@ -42,6 +42,7 @@ AddMoodDialog::AddMoodDialog(QWidget* parent)
     layout->addWidget(labelDescription);
     layout->addWidget(lineEditDescription);
     layout->addWidget(acceptButton);
+    connect(lineEditDescription, &QLineEdit::textChanged, this, &AddMoodDialog::setButtonAvailability);
     connect(acceptButton, &QPushButton::clicked, this, &AddMoodDialog::onAccept);
     setLayout(layout);
     setWindowTitle("Update Mood");
@@ -68,7 +69,7 @@ void AddMoodDialog::onStarClick(int count) {
 }
 
 void AddMoodDialog::setButtonAvailability() {
-    if (this->rating < 1) {
+    if (this->rating < 1 || this->lineEditDescription->text().isEmpty()) {
         this->acceptButton->setEnabled(false);
     } else {
         this->acceptButton->setEnabled(true);

@@ -111,12 +111,17 @@ void dailymood::applyStyleSheet() {
             cursor: pointer;
             border-radius: 12px;
             font-weight: bold;
-            cursor: pointer;
+        }
+         QPushButton:disabled {
+             background-color: #d4d4d4;
+             color: #a0a0a0;
         }
 
         QPushButton:hover {
             background-color: #45a049;
         }
+
+        
 
         QPushButton#starButton {
             background-color: white;
@@ -226,6 +231,25 @@ void dailymood::applyStyleSheet() {
 
         QMessageBox QPushButton:hover {
             background-color: #45a049;
+        }
+
+        QDialogButtonBox QPushButton {
+                    background-color: #4CAF50;
+                    color: white;
+                    border: none;
+                    padding: 10px 24px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 14px;
+                    margin: 4px 2px;
+                    cursor: pointer;
+                    border-radius: 12px;
+        }
+
+        QDialogButtonBox QPushButton:disabled {
+            background-color: #d4d4d4;
+            color: #a0a0a0;
         }
     )";
 
