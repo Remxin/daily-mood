@@ -21,7 +21,6 @@ TodoCard::TodoCard(Todo &todo, QWidget* parent) : QWidget(parent), m_todo(todo)
         "font-weight: light;"
     "}");
 
-    // Create button for interaction (e.g., mark as done)
     QPushButton* doneButton = new QPushButton(todo.getDone() ? "Undo" : "Done");
     doneButton->setObjectName("toggleTodoBtn");
     doneButton->setStyleSheet("QPushButton#toggleTodoBtn {"

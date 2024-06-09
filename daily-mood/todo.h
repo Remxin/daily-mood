@@ -38,4 +38,4 @@ public:
     friend std::ostream& operator<<(std::ostream& os, Todo& todo);
 };
 
-#endif // TODO_H
+#endif
