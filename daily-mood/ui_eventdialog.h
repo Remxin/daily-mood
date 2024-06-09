@@ -76,7 +76,6 @@ public:
         QMetaObject::connectSlotsByName(EventDialog);
 
 
-        // Connect buttonBox to dialog's accept and reject slots
         QObject::connect(buttonBox, &QDialogButtonBox::accepted, EventDialog, &QDialog::accept);
         QObject::connect(buttonBox, &QDialogButtonBox::rejected, EventDialog, &QDialog::reject);
 
@@ -84,9 +83,8 @@ public:
         QObject::connect(dateEdit, &QDateEdit::dateChanged, this, &Ui_EventDialog::setButtonAvailability);
         QObject::connect(timeEdit, &QTimeEdit::timeChanged, this, &Ui_EventDialog::setButtonAvailability);
 
-        // Ustaw wstępny stan przycisku
         setButtonAvailability();
-    } // setupUi
+    } 
 
     void retranslateUi(QDialog* EventDialog)
     {
@@ -94,7 +92,7 @@ public:
         labelName->setText(QCoreApplication::translate("EventDialog", "Name", nullptr));
         labelDate->setText(QCoreApplication::translate("EventDialog", "Date", nullptr));
         labelTime->setText(QCoreApplication::translate("EventDialog", "Time", nullptr));
-    } // retranslateUi
+    } 
 
    
 
@@ -143,8 +141,8 @@ private:
 
 namespace Ui {
     class EventDialog : public Ui_EventDialog {};
-} // namespace Ui
+}
 
 QT_END_NAMESPACE
 
-#endif // UI_EVENTDIALOG_H
+#endif 

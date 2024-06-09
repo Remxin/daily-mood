@@ -3,7 +3,7 @@
 #define MOODCARD_H
 
 #include <QWidget>
-#include "mood.h" // Include the Todo class
+#include "mood.h"
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
@@ -13,7 +13,6 @@ class MoodCard : public QWidget {
 
 public:
     MoodCard(Mood &mood, QWidget* parent = nullptr);
-    // Constructor taking Todo object
 
 
 };

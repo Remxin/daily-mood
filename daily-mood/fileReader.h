@@ -18,13 +18,12 @@ class fileReader {
 private:
     std::vector<std::string> todoData;
     std::vector<std::string> moodData;
-    //std::fstream file;
 
 public:
-    // Constructor
+ 
     fileReader();
 
-    // Destructor
+
     ~fileReader();
 
     // methods
@@ -38,4 +37,4 @@ public:
     std::vector<std::string> getMoodData();
 };
 
-#endif // FILEREADER_H
+#endif

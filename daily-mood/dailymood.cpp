@@ -11,9 +11,9 @@ dailymood::dailymood(QWidget* parent)
     applyStyleSheet();
 
     QScrollArea* todoScrollArea = ui.todosScroll;
-    QWidget* todoScrollContent = new QWidget(); // Utworzono nowy QWidget jako zawartość scrolla
-    todoScrollArea->setWidget(todoScrollContent); // Ustawienie todoScrollContent jako widgetu QScrollArea
-    todoScrollArea->setWidgetResizable(true); // Ustawienie scrolla jako resizable
+    QWidget* todoScrollContent = new QWidget(); 
+    todoScrollArea->setWidget(todoScrollContent); 
+    todoScrollArea->setWidgetResizable(true); 
 
     QVBoxLayout* moodScroll = ui.moodScroll;
     moodScroll->setObjectName("moodContainer");

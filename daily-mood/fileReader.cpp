@@ -63,15 +63,3 @@ void fileReader::writeMoods(const std::vector<Mood> moods) {
 
 void fileReader::addTodoRecord(const std::string record) {
 }
-
-//void fileReader::addMoodRecord(const std::string record) {
-//    std::ofstream file(MOODFILENAME, std::ios::app);
-//
-//    if (file.is_open()) {
-//        file << record << std::endl;
-//    }
-//    else {
-//        std::cerr << "Nie można otworzyć pliku";
-//    }
-//    file.close();
-//}

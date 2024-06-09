@@ -12,15 +12,15 @@ class TodoCard : public QWidget {
 
 public:
     TodoCard(Todo &todo, QWidget* parent = nullptr);
-    // Constructor taking Todo object
+  
 
  
 private slots:
     void onActionButtonClicked();
 private:
-    Todo &m_todo; // Member variable to store the Todo object
+    Todo &m_todo; 
     QPushButton* doneButton;
     
 };
 
-#endif // TODOCARD_H
+#endif 

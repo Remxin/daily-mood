@@ -16,4 +16,4 @@ namespace helpers {
     void todoQuicksort(std::vector<Todo>& arr, int low, int high);
 }
 
-#endif // HELPERS_H
+#endif

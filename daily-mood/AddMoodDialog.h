@@ -38,4 +38,4 @@ private:
   
 };
 
-#endif // AddMoodDialog_H
+#endif
