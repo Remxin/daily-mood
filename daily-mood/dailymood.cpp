@@ -82,7 +82,9 @@ void dailymood::openUpdateMoodDialog() {
     AddMoodDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted) {
         this->applicationData->addMood(date::getTodaysDateStr(), dialog.getRating(), dialog.getDescription());
+        this->applicationData->displayMood();
     }
+
 }
 
 void dailymood::applyStyleSheet() {
