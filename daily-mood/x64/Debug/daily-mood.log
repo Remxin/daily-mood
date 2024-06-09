@@ -1,4 +1,36 @@
-﻿  MoodCard.cpp
+<<<<<<< HEAD
+﻿  AddMoodDialog.cpp
+  appData.cpp
+  errors.cpp
+  helpers.cpp
+  mood.cpp
+  date.cpp
+  todo.cpp
+  TodoCard.cpp
   dailymood.cpp
-C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x985 that is illegal in the current source character set (codepage 65001).
-  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\daily-mood\x64\Debug\daily-mood.exe
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x818 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x819 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x826 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x82b that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x834 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0xf9b that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfa5 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfdd that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0xfea that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x107e that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1088 that is illegal in the current source character set (codepage 65001).
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp(1,1): warning C4828: The file contains a character starting at offset 0x1153 that is illegal in the current source character set (codepage 65001).
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\format(43): warning STL4038: The contents of <format> are available only with C++20 or later.
+  EventDialog.cpp
+  fileReader.cpp
+  main.cpp
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\appData.cpp(82,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  qrc_dailymood.cpp
+  moc_dailymood.cpp
+  moc_EventDialog.cpp
+  moc_AddMoodDialog.cpp
+  moc_TodoCard.cpp
+  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\x64\Debug\daily-mood.exe
+=======
+﻿  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\x64\Debug\daily-mood.exe
+>>>>>>> master

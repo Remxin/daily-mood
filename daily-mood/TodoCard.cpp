@@ -3,10 +3,10 @@
 
 TodoCard::TodoCard(Todo &todo, QWidget* parent) : QWidget(parent), m_todo(todo)
 {
-    // Create layout for the TodoCard
+    
     QHBoxLayout* layout = new QHBoxLayout(this);
 
-    // Create labels for displaying Todo details
+    
     QLabel* titleLabel = new QLabel(QString::fromStdString(todo.getName())); 
     titleLabel->setObjectName("todoName");
     titleLabel->setStyleSheet("QLabel#todoName {"
@@ -43,12 +43,12 @@ TodoCard::TodoCard(Todo &todo, QWidget* parent) : QWidget(parent), m_todo(todo)
     this->m_todo = todo;
     connect(doneButton, SIGNAL(clicked()), this, SLOT(onActionButtonClicked()));
 
-    // Add widgets to layout
+    
     layout->addWidget(titleLabel);
     layout->addWidget(timeLabel);
     layout->addWidget(doneButton);
 
-    // Set layout to the widget
+    
     setLayout(layout);
 }
 
