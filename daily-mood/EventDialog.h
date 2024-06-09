@@ -15,5 +15,7 @@ public:
     QTime getTime() const;
 
 private:
-    Ui::EventDialog ui;  
+    Ui::EventDialog ui;
+
+    void applyStyleSheet();  
 };

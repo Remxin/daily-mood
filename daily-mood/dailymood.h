@@ -24,6 +24,7 @@ private:
     Ui::dailymoodClass ui;
     fileReader* freader;
     appData *applicationData;
+    void applyStyleSheet();
  
     
 
