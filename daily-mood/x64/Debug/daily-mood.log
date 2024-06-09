@@ -1,6 +1,17 @@
 ﻿  AddMoodDialog.cpp
+  MoodCard.cpp
+  TodoCard.cpp
+  appData.cpp
   dailymood.cpp
+  errors.cpp
   fileReader.cpp
+  helpers.cpp
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p4\daily-mood\appData.cpp(94,63): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
   main.cpp
+  mood.cpp
+  todo.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\format(43): warning STL4038: The contents of <format> are available only with C++20 or later.
+  moc_MoodCard.cpp
+  moc_TodoCard.cpp
   moc_dailymood.cpp
   daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p4\x64\Debug\daily-mood.exe

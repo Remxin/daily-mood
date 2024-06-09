@@ -12,6 +12,7 @@ fileReader::fileReader() {
     // for todos
     std::ifstream file(TODOFILENAME);
     if (!file.is_open()) {
+        QMessageBox::warning(0, "Warning", "Cannot open todos file");
         std::cerr << "Failed to open the file." << std::endl;
     }
     else {
@@ -25,7 +26,7 @@ fileReader::fileReader() {
     // for mood
     std::ifstream mfile(MOODFILENAME);
     if (!mfile.is_open()) {
-        std::cerr << "Failed to open the file." << std::endl;
+        QMessageBox::warning(0, "Warning", "Cannot open mood file");
     }
     else {
         std::string line;

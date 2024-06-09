@@ -61,11 +61,11 @@ void dailymood::openAddTodoDialog() {
             this->onDateChanged();
         }
         else {
-            QMessageBox::warning(this, "Błąd", "Nie udało się otworzyć pliku do zapisu.");
+            QMessageBox::warning(this, "Error", "Cannot open file for writing");
         }
 
-        QMessageBox::information(this, "Informacja o wydarzeniu",
-            "Nazwa: " + name + "\nData: " + formattedDate + "\nCzas: " + time.toString());
+        QMessageBox::information(this, "Success",
+            "Successfully added new todo");
     }
 }
 
@@ -172,6 +172,7 @@ void dailymood::applyStyleSheet() {
 
         QWidget#appTitle {
             font-size: 36px;
+            font-weight: bold;
             color: #4CAF50;
         }
 
