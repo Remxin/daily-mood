@@ -1,4 +1,4 @@
-#include "dailymood.h"
+ï»¿#include "dailymood.h"
 #include <QMessageBox>
 #include <QFile>
 #include <QTextStream>
@@ -8,23 +8,23 @@ dailymood::dailymood(QWidget* parent)
 {
     ui.setupUi(this);
 
-   
     applyStyleSheet();
 
-    
-    QWidget* todoScroll = ui.todosScroll;
+    QScrollArea* todoScrollArea = ui.todosScroll;
+    QWidget* todoScrollContent = new QWidget(); // Utworzono nowy QWidget jako zawartoÅ›Ä‡ scrolla
+    todoScrollArea->setWidget(todoScrollContent); // Ustawienie todoScrollContent jako widgetu QScrollArea
+    todoScrollArea->setWidgetResizable(true); // Ustawienie scrolla jako resizable
+
     QVBoxLayout* moodScroll = ui.moodScroll;
 
     QCalendarWidget* calendar = ui.calendarWidget;
     std::string selectedDate = calendar->selectedDate().toString("dd/MM/yyyy").toStdString();
 
-    
     fileReader freader;
     this->freader = &freader;
 
-    
-    this->applicationData = new appData(freader.getTodoData(), freader.getMoodData(), selectedDate);
-    this->applicationData->displayTodos(todoScroll);
+    this->applicationData = new appData(freader.getTodoData(), freader.getMoodData(), selectedDate, todoScrollContent);
+    this->applicationData->displayTodos();
     this->applicationData->displayMood(moodScroll);
 
     connect(calendar, &QCalendarWidget::selectionChanged, this, &dailymood::onDateChanged);
@@ -49,25 +49,20 @@ void dailymood::openAddTodoDialog() {
         QDate date = dialog.getDate();
         QTime time = dialog.getTime();
 
-        
         QString formattedDate = date.toString("dd/MM/yyyy");
 
-        
         QFile file("data.txt");
         if (file.open(QIODevice::Append | QIODevice::Text)) {
-            
             QTextStream out(&file);
             out << formattedDate << "\t" << name << "\t" << time.toString() << "\t0\n";
             this->applicationData->addTodo(formattedDate.toStdString() + "\t" + name.toStdString() + "\t" + time.toString().toStdString() + "\t" + "0");
-            // Zamykanie pliku
             file.close();
             this->onDateChanged();
         }
         else {
-            QMessageBox::warning(this, "B³¹d", "Nie uda³o siê otworzyæ pliku do zapisu.");
+            QMessageBox::warning(this, "BÅ‚Ä…d", "Nie udaÅ‚o siÄ™ otworzyÄ‡ pliku do zapisu.");
         }
 
-        
         QMessageBox::information(this, "Informacja o wydarzeniu",
             "Nazwa: " + name + "\nData: " + formattedDate + "\nCzas: " + time.toString());
     }
@@ -91,20 +86,17 @@ void dailymood::openUpdateMoodDialog() {
 
 void dailymood::applyStyleSheet() {
     QString styleSheet = R"(
-        
         QWidget {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-size: 14px;
-            background-color: #FAF3E0;  /* Lekki kremowy kolor */
+            background-color: #FAF3E0;  
             color: #333333;
         }
 
-        
         QMainWindow {
-            background-color: #FAF3E0;  /* Lekki kremowy kolor */
+            background-color: #FAF3E0;  
         }
 
-        
         QPushButton {
             background-color: #4CAF50;
             border: none;
@@ -122,26 +114,26 @@ void dailymood::applyStyleSheet() {
         QPushButton:hover {
             background-color: #45a049;
         }
-    
+
         QPushButton#starButton {
             background-color: white;
         } 
-    
+
         QCalendarWidget {
             border: 1px solid #d4d4d4;
-            background-color: white;  /* Bia³y kolor t³a */
-            border-radius: 6px;  /* Dodanie zaokr¹glonych krawêdzi */
+            background-color: white;  
+            border-radius: 6px;  
         }
 
         QCalendarWidget QAbstractItemView:enabled {
             color: black;
-            background-color: #ffffff;  /* Bia³y kolor t³a */
+            background-color: #ffffff;  
             selection-background-color: #4CAF50;
             selection-color: white;
         }
 
         QCalendarWidget QToolButton {
-            background-color: #4CAF50;  /* Kolor przycisków kalendarza */
+            background-color: #4CAF50;  
             color: white;
             border: none;
             border-radius: 6px;
@@ -175,12 +167,14 @@ void dailymood::applyStyleSheet() {
             color: white;
         }
 
-        
         QScrollArea {
-            border: none;
+            border: none;  // UsuniÄ™cie obramowania
         }
 
-        
+        #appTitle {
+            font-size: 36px;
+        }
+
         QMessageBox {
             background-color: #ffffff;
         }
@@ -199,3 +193,4 @@ void dailymood::applyStyleSheet() {
 
     this->setStyleSheet(styleSheet);
 }
+

@@ -33,7 +33,7 @@ public:
     QWidget *gridLayoutWidget;
     QGridLayout *gridLayout;
     QCalendarWidget *calendarWidget;
-    QLabel *label;
+    QLabel *appTitle;
     QHBoxLayout *horizontalLayout_3;
     QPushButton *updateMoodBtn;
     QPushButton *addTodoButton;
@@ -65,11 +65,11 @@ public:
 
         gridLayout->addWidget(calendarWidget, 6, 0, 1, 3);
 
-        label = new QLabel(gridLayoutWidget);
-        label->setObjectName("label");
-        label->setAlignment(Qt::AlignCenter);
+        appTitle = new QLabel(gridLayoutWidget);
+        appTitle->setObjectName("appTitle");
+        appTitle->setAlignment(Qt::AlignCenter);
 
-        gridLayout->addWidget(label, 1, 0, 1, 3);
+        gridLayout->addWidget(appTitle, 1, 0, 1, 3);
 
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setSpacing(6);
@@ -123,7 +123,7 @@ public:
     void retranslateUi(QMainWindow *dailymoodClass)
     {
         dailymoodClass->setWindowTitle(QCoreApplication::translate("dailymoodClass", "dailymood", nullptr));
-        label->setText(QCoreApplication::translate("dailymoodClass", "TODOS", nullptr));
+        appTitle->setText(QCoreApplication::translate("dailymoodClass", "TODOS", nullptr));
         updateMoodBtn->setText(QCoreApplication::translate("dailymoodClass", "UPDATE MOOD", nullptr));
         addTodoButton->setText(QCoreApplication::translate("dailymoodClass", "ADD TODO", nullptr));
     } // retranslateUi
