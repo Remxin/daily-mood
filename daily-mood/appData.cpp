@@ -12,6 +12,7 @@ appData::appData(std::vector<std::string> todoData, std::vector<std::string> moo
 
     this->todoScroll = todoScroll;
     this->todoLayout = new QVBoxLayout(todoScroll);
+    this->todoLayout->setAlignment(Qt::AlignTop);
 
     std::vector<std::string> dateParts = helpers::split(initialDate, '/');
     this->date.day = std::stoi(dateParts[0]);

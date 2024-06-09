@@ -1,4 +1,4 @@
-/********************************************************************************
+﻿/********************************************************************************
 ** Form generated from reading UI file 'EventDialog.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.15.2
@@ -17,11 +17,13 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QVBoxLayout>
+#include <qpushbutton.h>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_EventDialog
+class Ui_EventDialog: public QObject
 {
+    Q_OBJECT
 public:
     QVBoxLayout* verticalLayout;
     QLabel* labelName;
@@ -37,6 +39,7 @@ public:
         if (EventDialog->objectName().isEmpty())
             EventDialog->setObjectName(QString::fromUtf8("EventDialog"));
         EventDialog->resize(400, 300);
+       
         verticalLayout = new QVBoxLayout(EventDialog);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         labelName = new QLabel(EventDialog);
@@ -68,12 +71,21 @@ public:
         verticalLayout->addWidget(buttonBox);
 
         retranslateUi(EventDialog);
+        applyStyles();
 
         QMetaObject::connectSlotsByName(EventDialog);
+
 
         // Connect buttonBox to dialog's accept and reject slots
         QObject::connect(buttonBox, &QDialogButtonBox::accepted, EventDialog, &QDialog::accept);
         QObject::connect(buttonBox, &QDialogButtonBox::rejected, EventDialog, &QDialog::reject);
+
+        QObject::connect(lineEditName, &QLineEdit::textChanged, this, &Ui_EventDialog::setButtonAvailability);
+        QObject::connect(dateEdit, &QDateEdit::dateChanged, this, &Ui_EventDialog::setButtonAvailability);
+        QObject::connect(timeEdit, &QTimeEdit::timeChanged, this, &Ui_EventDialog::setButtonAvailability);
+
+        // Ustaw wstępny stan przycisku
+        setButtonAvailability();
     } // setupUi
 
     void retranslateUi(QDialog* EventDialog)
@@ -83,6 +95,49 @@ public:
         labelDate->setText(QCoreApplication::translate("EventDialog", "Date", nullptr));
         labelTime->setText(QCoreApplication::translate("EventDialog", "Time", nullptr));
     } // retranslateUi
+
+   
+
+private slots:
+    void setButtonAvailability()
+    {
+        QDialog* EventDialog = qobject_cast<QDialog*>(verticalLayout->parentWidget());
+        if (EventDialog) {
+            QPushButton* okButton = buttonBox->button(QDialogButtonBox::Ok);
+            if (!lineEditName->text().isEmpty() && dateEdit->date().isValid() && timeEdit->time().isValid()) {
+                okButton->setEnabled(true);
+            }
+            else {
+                okButton->setEnabled(false);
+            }
+        }
+    }
+
+private:
+    void applyStyles()
+    {
+        QString styleSheet = R"(
+            QPushButton {
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                padding: 10px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 12px;
+            }
+
+            QPushButton:disabled {
+                background-color: #d4d4d4;
+                color: #a0a0a0;
+            }
+        )";
+        buttonBox->setStyleSheet(styleSheet);
+    }
 
 };
 

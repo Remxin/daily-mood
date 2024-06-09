@@ -12,6 +12,7 @@
 class QString;
 
 namespace errors {
+
     class WrongFileFormat : public std::exception {
     public:
         virtual const char* what() throw() {

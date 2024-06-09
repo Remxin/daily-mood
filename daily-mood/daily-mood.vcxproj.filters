@@ -93,9 +93,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ui_eventdialog.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="helpers.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -134,6 +131,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="MoodCard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ui_eventdialog.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
