@@ -4,6 +4,10 @@ C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\errors
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\helpers.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\helpers.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\mood.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\mood.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\date.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\date.obj
+<<<<<<< HEAD
+=======
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\MoodCard.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\MoodCard.obj
+>>>>>>> master
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\todo.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\todo.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\TodoCard.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\TodoCard.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\dailymood.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\dailymood.obj
@@ -15,3 +19,7 @@ C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\De
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc\moc_EventDialog.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc_EventDialog.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc\moc_AddMoodDialog.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc_AddMoodDialog.obj
 C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc\moc_TodoCard.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc_TodoCard.obj
+<<<<<<< HEAD
+=======
+C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc\moc_MoodCard.cpp;C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\x64\Debug\moc_MoodCard.obj
+>>>>>>> master

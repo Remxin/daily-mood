@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  AddMoodDialog.cpp
   appData.cpp
   errors.cpp
@@ -30,3 +31,6 @@ C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\daily-mood\appDat
   moc_AddMoodDialog.cpp
   moc_TodoCard.cpp
   daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\x64\Debug\daily-mood.exe
+=======
+﻿  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p3\x64\Debug\daily-mood.exe
+>>>>>>> master
