@@ -1,10 +1,1 @@
-﻿  moc ui_eventdialog.h
-  AddMoodDialog.cpp
-  EventDialog.cpp
-  dailymood.cpp
-  fileReader.cpp
-  main.cpp
-  moc_EventDialog.cpp
-  moc_dailymood.cpp
-  moc_ui_eventdialog.cpp
-  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p4\x64\Debug\daily-mood.exe
+﻿  daily-mood.vcxproj -> C:\Users\poczt\Documents\school\Studia-I-politechnika\JiPP2\p4\x64\Debug\daily-mood.exe

@@ -50,7 +50,7 @@ AddMoodDialog::AddMoodDialog(QWidget* parent)
 
 
 void AddMoodDialog::onAccept() {
-    QMessageBox::information(this, "Modal Dialog", "Accept button clicked");
+    QMessageBox::information(this, "Success", "Successfully updated todays mood");
     accept();
 }
 
