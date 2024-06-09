@@ -15,38 +15,30 @@
 class appData
 {
 private:
-	std::vector<Todo> todos;
-	std::vector<Mood> moods;
-	date::DATE date;
-	QWidget* todoScroll;
-	//QVBoxLayout* moodScroll;
-	QVBoxLayout* todoLayout;
-	QVBoxLayout* moodLayout;
-	QCalendarWidget* calendar;
+    std::vector<Todo> todos;
+    std::vector<Mood> moods;
+    date::DATE date;
+    QWidget* todoScroll;
+    QVBoxLayout* todoLayout;
+    QVBoxLayout* moodLayout;
+    QCalendarWidget* calendar;
 
-	// methods
-	Mood* findMood(unsigned day, unsigned month, unsigned year);
+    Mood* findMood(unsigned day, unsigned month, unsigned year);
 
 public:
-	appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate);
+    appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate, QWidget* todoScroll);
 
-	// methods
-	void displayTodos(QWidget* todoScroll);
-	void displayTodos();
-	void displayMood(QVBoxLayout* moodScroll);
-	void displayMood();
-	void clearTodos();
-	void sort();
+    void displayTodos();
+    void displayMood(QVBoxLayout* moodScroll);
+    void displayMood();
+    void clearTodos();
+    void sort();
 
+    void addTodo(std::string data);
+    void addMood(std::string data);
+    void addMood(std::string date, int rating, std::string description);
+    void setDate(std::string newDate);
 
-	// setters
-	void addTodo(std::string data);
-	void addMood(std::string data);
-	void addMood(std::string date, int rating, std::string description);
-	void setDate(std::string newDate);
-
-	// getters
-	std::vector<Todo> getTodos();
-	std::vector<Mood> getMoods();
+    std::vector<Todo> getTodos();
+    std::vector<Mood> getMoods();
 };
-

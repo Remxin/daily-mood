@@ -1,23 +1,17 @@
 #include "appData.h"
 #include "todo.h"
 
-
-
-appData::appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate) {
-	for (std::string d : todoData) {
+appData::appData(std::vector<std::string> todoData, std::vector<std::string> moodData, std::string initialDate, QWidget* todoScroll) {
+    for (std::string d : todoData) {
         this->addTodo(d);
-	}
+    }
 
     for (std::string m : moodData) {
         this->addMood(m);
     }
 
-
-    QVBoxLayout* todoLayout = new QVBoxLayout(this->todoScroll);
-    this->todoLayout = todoLayout;
-
-    //QVBoxLayout* moodLayout = new QVBoxLayout(this->moodScroll);
-    //this->moodLayout = moodLayout;
+    this->todoScroll = todoScroll;
+    this->todoLayout = new QVBoxLayout(todoScroll);
 
     std::vector<std::string> dateParts = helpers::split(initialDate, '/');
     this->date.day = std::stoi(dateParts[0]);
@@ -25,14 +19,8 @@ appData::appData(std::vector<std::string> todoData, std::vector<std::string> moo
     this->date.year = std::stoi(dateParts[2]);
 }
 
-void appData::displayTodos(QWidget* todoScroll) {
-    this->todoScroll = todoScroll;
-    this->displayTodos();
-}
-
 void appData::displayTodos() {
-
-    for (Todo &td : this->todos) {
+    for (Todo& td : this->todos) {
         date::DATE tdDate = td.getDateObj();
         if (this->date.day != tdDate.day || this->date.month != tdDate.month || this->date.year != tdDate.year) continue;
         TodoCard* todoCard = new TodoCard(td);
@@ -48,7 +36,7 @@ void appData::displayMood(QVBoxLayout* moodScroll) {
 
 void appData::displayMood() {
     QLayoutItem* item;
-    while (item = this->moodLayout->takeAt(0)) {
+    while ((item = this->moodLayout->takeAt(0)) != nullptr) {
         delete item->widget();
         delete item;
     }
@@ -64,18 +52,19 @@ void appData::displayMood() {
 void appData::clearTodos() {
     QLayoutItem* item;
     while ((item = this->todoLayout->takeAt(0)) != nullptr) {
-        delete item->widget(); // delete the widget
-        delete item; // delete the layout item
+        delete item->widget();
+        delete item;
     }
 }
 
 void appData::addTodo(std::string data) {
-	this->todos.push_back(Todo(data));
-};
+    this->todos.push_back(Todo(data));
+}
 
 void appData::addMood(std::string data) {
     this->moods.push_back(Mood(data));
 }
+
 void appData::addMood(std::string date, int rating, std::string description) {
     std::vector<std::string> dateParts = helpers::split(date, '/');
     int moodDay = std::stoi(dateParts[0]);
@@ -98,19 +87,17 @@ void appData::setDate(std::string newDate) {
     this->date.year = std::stoi(date[2]);
 }
 
-std::vector<Todo> appData::getTodos() { return this->todos; };
-std::vector<Mood> appData::getMoods() { return this->moods; };
+std::vector<Todo> appData::getTodos() { return this->todos; }
+std::vector<Mood> appData::getMoods() { return this->moods; }
 
 void appData::sort() {
     helpers::todoQuicksort(this->todos, 0, this->todos.size() - 1);
 }
 
 Mood* appData::findMood(unsigned day, unsigned month, unsigned year) {
-    for (Mood &m : this->moods) {
+    for (Mood& m : this->moods) {
         date::DATE d = m.getDateObj();
         if (d.day == day && d.month == month && d.year == year) return &m;
     }
-
     return nullptr;
 }
-
