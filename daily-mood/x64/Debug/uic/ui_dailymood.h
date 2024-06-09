@@ -97,12 +97,12 @@ public:
         todosScroll->setWidget(scrollAreaWidgetContents);
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(430, 360, 181, 191));
+        verticalLayoutWidget->setGeometry(QRect(440, 360, 171, 191));
         moodScroll = new QVBoxLayout(verticalLayoutWidget);
         moodScroll->setSpacing(6);
         moodScroll->setContentsMargins(11, 11, 11, 11);
         moodScroll->setObjectName("moodScroll");
-        moodScroll->setContentsMargins(0, 0, 0, 0);
+        moodScroll->setContentsMargins(20, 0, 0, 0);
         dailymoodClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(dailymoodClass);
         menuBar->setObjectName("menuBar");
@@ -123,7 +123,7 @@ public:
     void retranslateUi(QMainWindow *dailymoodClass)
     {
         dailymoodClass->setWindowTitle(QCoreApplication::translate("dailymoodClass", "dailymood", nullptr));
-        appTitle->setText(QCoreApplication::translate("dailymoodClass", "TODOS", nullptr));
+        appTitle->setText(QCoreApplication::translate("dailymoodClass", "DAILY MOOD", nullptr));
         updateMoodBtn->setText(QCoreApplication::translate("dailymoodClass", "UPDATE MOOD", nullptr));
         addTodoButton->setText(QCoreApplication::translate("dailymoodClass", "ADD TODO", nullptr));
     } // retranslateUi

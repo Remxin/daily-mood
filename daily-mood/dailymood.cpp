@@ -16,6 +16,7 @@ dailymood::dailymood(QWidget* parent)
     todoScrollArea->setWidgetResizable(true); // Ustawienie scrolla jako resizable
 
     QVBoxLayout* moodScroll = ui.moodScroll;
+    moodScroll->setObjectName("moodContainer");
 
     QCalendarWidget* calendar = ui.calendarWidget;
     std::string selectedDate = calendar->selectedDate().toString("dd/MM/yyyy").toStdString();
@@ -109,6 +110,8 @@ void dailymood::applyStyleSheet() {
             margin: 4px 2px;
             cursor: pointer;
             border-radius: 12px;
+            font-weight: bold;
+            cursor: pointer;
         }
 
         QPushButton:hover {
@@ -167,13 +170,47 @@ void dailymood::applyStyleSheet() {
             color: white;
         }
 
-        QScrollArea {
-            border: none;  // Usunięcie obramowania
+        QWidget#appTitle {
+            font-size: 36px;
+            color: #4CAF50;
         }
 
-        #appTitle {
-            font-size: 36px;
+        #moodContainer {
+            position: relative;
+            width: 100%;
+            padding: 20px;
         }
+        
+        #moodTitle {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+  
+        #moodDate {
+            color: gray;
+            font-size: 12px;
+        }
+
+        #moodRating {
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+        }
+
+        #moodDescription {
+            font-size: 10px;
+            
+        }
+        
+
+        QScrollArea {
+            border: none;
+        }
+
+       
 
         QMessageBox {
             background-color: #ffffff;
