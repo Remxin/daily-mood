@@ -16,6 +16,7 @@ AddMoodDialog::AddMoodDialog(QWidget* parent)
 
     for (int i = 0; i < 5; i++) {
         QPushButton* star = new QPushButton(this);
+        star->setObjectName("starButton");
         star->setIcon(QIcon("star-blank.png"));
         star->setIconSize(QSize(65, 65));
         this->stars.push_back(star);

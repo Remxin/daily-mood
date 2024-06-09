@@ -1,19 +1,19 @@
-1/5/2024	nowe	0:0	0
 1/1/2000	cervcfrv	0:0	0
 25/5/2024	nowe2	0:0	0
 25/5/2024	a	0:0	1
 1/1/2000	Zrobic pranie	0:0	0
+1/5/2024	nowe	0:0	0
 20/5/2024	zrobic project z JiPP	10:10	0
 20/5/2024	poodkurzac	10:10	0
+16/6/2024	kolos	12:12	0
+9/6/2024	ugtowac	12:12	0
+9/6/2024	zadanie domowe	12:12	0
+9/6/2024	posprzatac	12:12	0
 9/6/2024	Zrobic pranie	12:12	1
 8/6/2024	Projekt	12:12	0
 8/6/2024	Projekt	12:12	0
 9/6/2024	Project	12:12	1
 25/5/2024	d	12:12	0
 8/6/2024	d	12:12	0
-16/6/2024	kolos	12:12	0
-9/6/2024	ugtowac	12:12	0
-9/6/2024	zadanie domowe	12:12	0
-9/6/2024	posprzatac	12:12	0
 20/5/2024	zrobic obiad	15:15	0
 24/5/2024	Ala ma	19:19	1

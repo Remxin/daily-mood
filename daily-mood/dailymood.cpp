@@ -8,20 +8,20 @@ dailymood::dailymood(QWidget* parent)
 {
     ui.setupUi(this);
 
-    // Zastosuj arkusz stylów
+   
     applyStyleSheet();
 
-    // Dostêp do komponentów UI
+    
     QWidget* todoScroll = ui.todosScroll;
 
     QCalendarWidget* calendar = ui.calendarWidget;
     std::string selectedDate = calendar->selectedDate().toString("dd/MM/yyyy").toStdString();
 
-    // Pobieranie danych tekstowych
+    
     fileReader freader;
     this->freader = &freader;
 
-    //// Dodawanie zadañ i nastrojów
+    
     this->applicationData = new appData(freader.getTodoData(), freader.getMoodData(), selectedDate);
     this->applicationData->displayTodos(todoScroll);
 
@@ -47,13 +47,13 @@ void dailymood::openAddTodoDialog() {
         QDate date = dialog.getDate();
         QTime time = dialog.getTime();
 
-        // Formatowanie daty do "dd/MM/yyyy"
+        
         QString formattedDate = date.toString("dd/MM/yyyy");
 
-        // Otwieranie pliku do zapisu w trybie dopisywania
+        
         QFile file("data.txt");
         if (file.open(QIODevice::Append | QIODevice::Text)) {
-            // Zapisywanie danych do pliku, oddzielone tabulatorami
+            
             QTextStream out(&file);
             out << formattedDate << "\t" << name << "\t" << time.toString() << "\t0\n";
             this->applicationData->addTodo(formattedDate.toStdString() + "\t" + name.toStdString() + "\t" + time.toString().toStdString() + "\t" + "0");
@@ -65,7 +65,7 @@ void dailymood::openAddTodoDialog() {
             QMessageBox::warning(this, "B³¹d", "Nie uda³o siê otworzyæ pliku do zapisu.");
         }
 
-        // Wyœwietlanie informacji o dodanym wydarzeniu
+        
         QMessageBox::information(this, "Informacja o wydarzeniu",
             "Nazwa: " + name + "\nData: " + formattedDate + "\nCzas: " + time.toString());
     }
@@ -119,8 +119,11 @@ void dailymood::applyStyleSheet() {
         QPushButton:hover {
             background-color: #45a049;
         }
-
-        
+    
+        QPushButton#starButton {
+            background-color: white;
+        } 
+    
         QCalendarWidget {
             border: 1px solid #d4d4d4;
             background-color: white;  /* Bia³y kolor t³a */

@@ -57,8 +57,7 @@ void EventDialog::applyStyleSheet() {
         QPushButton:hover {
             background-color: #45a049;
         }
-
-        
+          
         QLineEdit {
             border: 1px solid #d4d4d4;
             border-radius: 4px;
@@ -78,6 +77,7 @@ void EventDialog::applyStyleSheet() {
         QLabel {
             color: #333333;
         }
+        
     )";
 
     this->setStyleSheet(styleSheet);
