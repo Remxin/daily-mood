@@ -40,7 +40,7 @@ public:
     QScrollArea *todosScroll;
     QWidget *scrollAreaWidgetContents;
     QWidget *verticalLayoutWidget;
-    QVBoxLayout *verticalLayout;
+    QVBoxLayout *moodScroll;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -97,12 +97,12 @@ public:
         todosScroll->setWidget(scrollAreaWidgetContents);
         verticalLayoutWidget = new QWidget(centralWidget);
         verticalLayoutWidget->setObjectName("verticalLayoutWidget");
-        verticalLayoutWidget->setGeometry(QRect(430, 360, 181, 201));
-        verticalLayout = new QVBoxLayout(verticalLayoutWidget);
-        verticalLayout->setSpacing(6);
-        verticalLayout->setContentsMargins(11, 11, 11, 11);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        verticalLayoutWidget->setGeometry(QRect(430, 360, 181, 191));
+        moodScroll = new QVBoxLayout(verticalLayoutWidget);
+        moodScroll->setSpacing(6);
+        moodScroll->setContentsMargins(11, 11, 11, 11);
+        moodScroll->setObjectName("moodScroll");
+        moodScroll->setContentsMargins(0, 0, 0, 0);
         dailymoodClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(dailymoodClass);
         menuBar->setObjectName("menuBar");

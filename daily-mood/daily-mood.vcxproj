@@ -98,6 +98,7 @@
     <ClCompile Include="helpers.cpp" />
     <ClCompile Include="mood.cpp" />
     <ClCompile Include="date.cpp" />
+    <ClCompile Include="MoodCard.cpp" />
     <ClCompile Include="todo.cpp" />
     <ClCompile Include="TodoCard.cpp" />
     <QtRcc Include="dailymood.qrc" />
@@ -125,6 +126,7 @@
     <ClInclude Include="helpers.h" />
     <QtMoc Include="TodoCard.h" />
     <ClInclude Include="mood.h" />
+    <QtMoc Include="MoodCard.h" />
     <ClInclude Include="todo.h" />
     <ClInclude Include="ui_eventdialog.h" />
   </ItemGroup>

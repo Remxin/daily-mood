@@ -88,6 +88,9 @@
     <ClCompile Include="errors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MoodCard.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ui_eventdialog.h">
@@ -128,6 +131,9 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="AddMoodDialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MoodCard.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

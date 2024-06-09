@@ -85,10 +85,10 @@
       <x>430</x>
       <y>360</y>
       <width>181</width>
-      <height>201</height>
+      <height>191</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout"/>
+    <layout class="QVBoxLayout" name="moodScroll"/>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
